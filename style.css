@@ -31,6 +31,8 @@ Version: 1.0
 6.2) =sticky_stuff:
 6.3) =hero:
 6.4) =decorations:
+6.5) =dropdowney:
+6.6) =slidey:
 
 
 FIN DE MAPA DE CONTENIDOS */
@@ -426,6 +428,125 @@ body.home{
   height: 6px;
   background: var(--funky_green);
 }
+
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.5) =dropdowney:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+
+.dropdowny_box{
+  margin: 2.5rem var(--lateral);
+  display: grid;
+  color: white;
+}
+.dropdowny_title_text{
+  margin: auto 0 0 auto;
+  display: grid;
+  grid-row-gap: 1rem;
+}
+.dropdowny_title{
+  text-align: right;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 1.04px;
+}
+.dropdowny_img_box{
+  display: grid;
+}
+.dropdowny_title_img{
+  width: 243px;
+  margin: auto 0 auto auto;
+}
+.dropdowny_title_img.solid{
+  margin-right: -10px;
+  margin-bottom: -10px;
+}
+.dropdowny{
+  display: grid;
+  padding: 3.5rem 0 0 0;
+  width: 85%;
+  margin: auto 0 auto auto;
+}
+.dropdowny_item{
+  border-top: 1px solid var(--funky_green);
+  border-bottom: 1px solid var(--funky_green);
+  height: 140px;
+  overflow-y: hidden;
+  transition: .5s;
+}
+.dropdowny_item.unfold:nth-child(1){
+  height: 240px;
+}
+.dropdowny_item.unfold:nth-child(2){
+  height: 240px;
+}
+.dropdowny_item.unfold:nth-child(3){
+  height: 240px;
+}
+.dropdowny_item_title{
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  height: 140px;
+  padding: 0 .75rem;
+  cursor: pointer;
+}
+.dropdowny_item_text{
+  font-size: 18px;
+  line-height: 1.44;
+  letter-spacing: 0.9px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  padding: 0 .75rem;
+}
+.dropdowny_CTA{
+  display: flex;
+  margin: 1.5rem 0 auto auto;
+  height: auto;
+}
+.dropdowny_CTA_text{
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: 1.1px;
+  margin-right: 1rem;
+  color:var(--raichu_gold);
+}
+.dropdowny_CTA_icon{
+  width: 31px;
+}
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.6) =slidey:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+
+.slidey{
+  padding: 2.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  color: white;
+}
+.slidey_title{
+ font-size: 50px;
+ font-weight: normal;
+ letter-spacing: 1.04px;
+ grid-column: 1/-1;
+ padding-left: var(--lateral);
+}
+.slidey_bg{
+  display: grid;
+  grid-column:1/9;
+}
+.slidey_img{
+
+}
+
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
