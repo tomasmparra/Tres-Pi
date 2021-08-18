@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section class="hero">
   <div class="hero_wording">
-    <p class="html_deco">&#60;h1&gt;</p>
+    <p class="html_deco">&lt;h1&gt;</p>
     <h1 class="hero_copy">Diseño y desarrollo web profesional con <span class="bold_italic">espíritu freelance</span></h1>
     <p class="hero_text">Diseñamos, desarrollamos y alojamos tu página web a medida. Ya sea un e-commerce, una landing page, un site institucional o lo que necesite tu proyecto. Te ofrecemos una solución digital integral. Déjalo todo en nuestras manos.</p>
     <div class="funky_stripe"></div>
@@ -15,7 +15,7 @@
     );
     responsive_img($config);
   ?>
-  <img class="hero_arrow" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
+  <img class="circle_arrow" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
 </section>
 <section class="dropdowny_box">
   <div class="dropdowny_title_text">
@@ -46,18 +46,43 @@
 </section>
 <section class="slidey">
   <p class="slidey_title">El equipo</p>
-  <figure class="slidey_bg">
-    <img class="slidey_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/slidey_bg.jpg' ?>" alt="Imagen de fondo" >
-    <figcaption class="slidey_bg_caption rowcol1">
-      <p class="slidey_bg_text">
-        <br>
-        <span></span>
-      </p>
-    </figcaption>
-  </figure>
-  <figure class="slidey_card">
-    <img class="slidey_picture" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
-    <figcaption class="slidey_card_caption"></figcaption>
-  </figure>
+  <img class="slidey_bg rowcol1" src="<?php echo get_template_directory_uri() . '/assets/slidey_bg.jpg' ?>" alt="Imagen de fondo" >
+  <div class="slide_call">
+    <p class="slidey_bg_text">Nice to meet you!
+      <br>
+      <span>¿un café?</span>
+    </p>
+    <img class="circle_arrow right" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
+  </div>
+  <p class="html_deco">&lt;img&gt;</p>
+
+  <div class="slidey_progress">
+    <p class="slidey_progression">1/3</p>
+    <div class="slidey_bar"></div>
+  </div>
+
+  <div class="slidey_card_box">
+    <figure class="slidey_card">
+      <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
+      <figcaption class="slidey_card_caption rowcol1">
+        <p>Tomás Moral</p>
+        <p>CEO</p>
+      </figcaption>
+    </figure>
+    <figure class="slidey_card">
+      <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
+      <figcaption class="slidey_card_caption rowcol1">
+        <p>Sofia Molinero</p>
+        <p>CEO</p>
+      </figcaption>
+    </figure>
+    <figure class="slidey_card">
+      <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
+      <figcaption class="slidey_card_caption rowcol1">
+        <p>Ramiro Gomez</p>
+        <p>CEO</p>
+      </figcaption>
+    </figure>
+  </div>
 </section>
 <?php get_footer(); ?>

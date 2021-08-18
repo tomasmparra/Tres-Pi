@@ -31,6 +31,10 @@ Version: 1.0
 6.2) =sticky_stuff:
 6.3) =hero:
 6.4) =decorations:
+6.4.1) =html_deco:
+6.4.2) =bold_italic:
+6.4.3) =funky_stripe:
+6.4.4) =circle_arrow:
 6.5) =dropdowney:
 6.6) =slidey:
 
@@ -60,6 +64,7 @@ FIN DE MAPA DE CONTENIDOS */
   /* COLORS */
 
   --funky_green: #0bbba9;
+  --funky_pale_green: #182725;
   --bg_grey: #1a1717;
   --raichu_gold: #ffb307;
   --deco_grey: #252222;
@@ -398,9 +403,7 @@ body.home{
   line-height: 1.63;
   letter-spacing: 0.8px;
 }
-.hero_arrow{
-  width: 177px;
-  height: auto;
+.hero .circle_arrow{
   position: absolute;
   bottom: 0;
   right: var(--lateral);
@@ -413,22 +416,36 @@ body.home{
                           6.4) =decorations:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
+
+/* 6.4.1) =html_deco: */
 .html_deco{
   font-size: 60px;
   font-weight: 800;
   letter-spacing: 1.25px;
   color: var(--deco_grey);
 }
+
+/* 6.4.2) =bold_italic: */
 .bold_italic{
   font-weight: 700;
   font-style: italic;
 }
+
+/* 6.4.3) =funky_stripe: */
 .funky_stripe{
   width: 128px;
   height: 6px;
   background: var(--funky_green);
 }
 
+/* 6.4.4) =circle_arrow: */
+.circle_arrow{
+  width: 177px;
+  height: auto;
+}
+.circle_arrow.right{
+  transform: rotate(-90deg);
+}
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -529,24 +546,97 @@ body.home{
 .slidey{
   padding: 2.5rem 0;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: 1fr max-content 1fr 1fr 1fr;
+  grid-template-rows: min-content min-content 1fr min-content min-content;
   color: white;
+  z-index: 0;
 }
 .slidey_title{
  font-size: 50px;
- font-weight: normal;
+ font-weight: 800;
  letter-spacing: 1.04px;
  grid-column: 1/-1;
- padding-left: var(--lateral);
+ grid-row: 1;
+ padding:  0 0 1rem var(--lateral);
 }
 .slidey_bg{
   display: grid;
-  grid-column:1/9;
+  grid-column:1/5;
+  grid-row: 2/5;
 }
-.slidey_img{
-
+.slide_call{
+  grid-column: 2/3;
+  grid-row: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom:1rem;
+}
+.slide_call .circle_arrow{
+  margin-left: 2rem;
+}
+.slidey_bg_text {
+  font-size: 40px;
+  font-weight: 700;
+}
+.slidey_bg_text span {
+  font-weight: 400;
+  font-style: italic;
+}
+.slidey .html_deco{
+  padding: 4px 6.5rem 22px 6.5rem;
 }
 
+.slidey_progress{
+  grid-column: 2;
+  grid-row: 5;
+  grid-gap:7px;
+  display:grid;
+  margin:1.5rem 0 .5rem 0;
+}
+.slidey_bar{
+  width: 100%;
+  background: var(--funky_pale_green);
+  height: 7px;
+  position: relative;
+}
+.slidey_bar::after{
+  background: var(--funky_green);
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 33%;
+  left:0;
+  top: 0;
+}
+.slidey_progression{
+  font-style: italic;
+  font-size: 14px;
+}
+
+.slidey_card_box{
+  grid-column: 4/6;
+  grid-row: 3/6;
+  display:grid;
+  grid-auto-flow: column;
+  grid-gap:2rem;
+}
+.slidey_card{
+  display:grid;
+  position:relative;
+  width: 25vw;
+}
+.slidey_card_img{
+  width:100%;
+}
+.slidey_card_caption{
+  transform:rotate(90deg);
+  transform-origin: top left;
+  position:relative;
+  top:1rem;
+  left:calc(100% - 1rem);
+  margin-bottom:auto;
+}
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
