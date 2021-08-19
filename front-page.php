@@ -62,7 +62,7 @@
   </div>
 
   <div class="slidey_card_box">
-    <figure class="slidey_card">
+    <figure class="slidey_card first">
       <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
       <figcaption class="slidey_card_caption rowcol1">
         <p>Tomás Moral</p>
@@ -76,13 +76,34 @@
         <p>CEO</p>
       </figcaption>
     </figure>
-    <figure class="slidey_card">
+    <figure class="slidey_card last">
       <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
       <figcaption class="slidey_card_caption rowcol1">
         <p>Ramiro Gomez</p>
         <p>CEO</p>
       </figcaption>
     </figure>
+  </div>
+</section>
+<section class="blurb_box">
+  <div class="blurb_title_box">
+    <h2 class="blurb_box_title">Diseños <span>vibrantes</span> para<br>sites auto administrables</h2>
+    <p class="html_deco">&lt;h2&gt;</p>
+  </div>
+  <div class="blurb first">
+    <img class="blurb_img" src="<?php echo get_template_directory_uri() . '/assets/blurb_img_1x2.png' ?>" alt="Icono decorativo del punto 1">
+    <p class="blurb_title">Te acompañamos en <br>cada paso</p>
+    <p class="blurb_text">Desde la creación de tu site, a su hosting y mantenimiento. No te vamos a engañar, nos gustan las relaciones largas.</p>
+  </div>
+  <div class="blurb">
+    <img class="blurb_img" src="<?php echo get_template_directory_uri() . '/assets/blurb_img_2x2.png' ?>" alt="Icono decorativo del punto 2">
+    <p class="blurb_title">Haz que tu web crezca <br>contigo cada día</p>
+    <p class="blurb_text">No te conformes y ten un site independiente. Crea una web escalable, capaz de crecer a la par de tu empresa.</p>
+  </div>
+  <div class="blurb last">
+    <img class="blurb_img" src="<?php echo get_template_directory_uri() . '/assets/blurb_img_3x2.png' ?>" alt=" Icono decorativo del punto 3">
+    <p class="blurb_title">Nuestro equipo se <br>adapta a ti</p>
+    <p class="blurb_text">Cuéntanos que necesitas y lo ponemos a tu disposición. ¿SEO, Diseño App, UI UX, o  un gestor 24/7?</p>
   </div>
 </section>
 <?php get_footer(); ?>

@@ -37,6 +37,7 @@ Version: 1.0
 6.4.4) =circle_arrow:
 6.5) =dropdowney:
 6.6) =slidey:
+6.7) =blurbs:
 
 
 FIN DE MAPA DE CONTENIDOS */
@@ -528,6 +529,7 @@ body.home{
 }
 .dropdowny_CTA_text{
   font-size: 22px;
+  font-weight: normal;
   line-height: 1.18;
   letter-spacing: 1.1px;
   margin-right: 1rem;
@@ -544,12 +546,13 @@ body.home{
 --------------------------------------------------------------------------- */
 
 .slidey{
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   display: grid;
-  grid-template-columns: 1fr max-content 1fr 1fr 1fr;
+  grid-template-columns: var(--lateral) max-content 1fr 1fr 1fr;
   grid-template-rows: min-content min-content 1fr min-content min-content;
   color: white;
   z-index: 0;
+  overflow-x: hidden;
 }
 .slidey_title{
  font-size: 50px;
@@ -573,18 +576,19 @@ body.home{
   padding-bottom:1rem;
 }
 .slide_call .circle_arrow{
-  margin-left: 2rem;
+  margin: 0 1rem 0 2rem;
 }
 .slidey_bg_text {
   font-size: 40px;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 .slidey_bg_text span {
   font-weight: 400;
   font-style: italic;
 }
 .slidey .html_deco{
-  padding: 4px 6.5rem 22px 6.5rem;
+  padding: 4px 6.5rem 22px 5.5rem;
 }
 
 .slidey_progress{
@@ -624,10 +628,17 @@ body.home{
 .slidey_card{
   display:grid;
   position:relative;
-  width: 25vw;
+  width: 28vw;
+}
+.slidey_card.first{
+  margin-left: 0;
+}
+.slidey_card.last{
+  margin-right: 0;
 }
 .slidey_card_img{
   width:100%;
+  height: 100%;
 }
 .slidey_card_caption{
   transform:rotate(90deg);
@@ -636,8 +647,77 @@ body.home{
   top:1rem;
   left:calc(100% - 1rem);
   margin-bottom:auto;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.slidey_card_caption p:nth-child(2){
+  font-weight: 400;
 }
 
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.7) =blurbs:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+
+.blurb_box{
+  padding: 2.5rem var(--lateral) 5rem var(--lateral);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+  grid-row-gap: 4.5rem;
+}
+.blurb_title_box{
+  grid-column: 1/-1;
+  position: relative;
+}
+.blurb_title_box{
+
+}
+.blurb_box_title{
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.blurb_box_title span{
+  font-style: italic;
+}
+.blurb_title_box .html_deco{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-90%, -90%);
+}
+.blurb{
+  display: grid;
+  grid-gap: 2rem;
+  max-width: 280px;
+  margin: auto;
+}
+.blurb.first{
+  margin-left: 0;
+}
+.blurb.last{
+  margin-right: 0;
+}
+.blurb_img{
+  height: 197px;
+  width: auto;
+  margin: auto;
+}
+.blurb_title{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.75;
+}
+.blurb_text{
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.8px;
+}
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                           6.69) =redDot:
