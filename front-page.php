@@ -87,8 +87,8 @@
 </section>
 <section class="blurb_box">
   <div class="blurb_title_box">
-    <h2 class="blurb_box_title">Diseños <span>vibrantes</span> para<br>sites auto administrables</h2>
-    <p class="html_deco">&lt;h2&gt;</p>
+    <h2 class="blurb_box_title rowcol1">Diseños <span>vibrantes</span> para<br>sites auto administrables</h2>
+    <p class="html_deco rowcol1">&lt;h2&gt;</p>
   </div>
   <div class="blurb first">
     <img class="blurb_img" src="<?php echo get_template_directory_uri() . '/assets/blurb_img_1x2.png' ?>" alt="Icono decorativo del punto 1">

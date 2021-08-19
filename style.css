@@ -422,7 +422,7 @@ body.home{
 .html_deco{
   font-size: 60px;
   font-weight: 800;
-  letter-spacing: 1.25px;
+  letter-spacing: 7px;
   color: var(--deco_grey);
 }
 
@@ -672,9 +672,8 @@ body.home{
 .blurb_title_box{
   grid-column: 1/-1;
   position: relative;
-}
-.blurb_title_box{
-
+  display: grid;
+  margin: auto;
 }
 .blurb_box_title{
   font-size: 38px;
@@ -686,10 +685,15 @@ body.home{
   font-style: italic;
 }
 .blurb_title_box .html_deco{
-  position: absolute;
   right: 0;
   bottom: 0;
-  transform: translate(-90%, -90%);
+  font-size: 100px;
+  line-height: 1;
+  width: min-content;
+  margin: auto 0 0 auto;
+  z-index: -1;
+  transform: translate(75%, 45%);
+
 }
 .blurb{
   display: grid;
