@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section class="hero">
   <div class="hero_wording">
-    <p class="html_deco">&#60;h1&gt;</p>
+    <p class="html_deco">&lt;h1&gt;</p>
     <h1 class="hero_copy">Diseño y desarrollo web profesional con <span class="bold_italic">espíritu freelance</span></h1>
     <p class="hero_text">Diseñamos, desarrollamos y alojamos tu página web a medida. Ya sea un e-commerce, una landing page, un site institucional o lo que necesite tu proyecto. Te ofrecemos una solución digital integral. Déjalo todo en nuestras manos.</p>
     <div class="funky_stripe"></div>
@@ -15,7 +15,7 @@
     );
     responsive_img($config);
   ?>
-  <img class="hero_arrow" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
+  <img class="circle_arrow" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
 </section>
 <section class="dropdowny_box">
   <div class="dropdowny_title_text">
@@ -46,18 +46,67 @@
 </section>
 <section class="slidey">
   <p class="slidey_title">El equipo</p>
-  <figure class="slidey_bg">
-    <img class="slidey_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/slidey_bg.jpg' ?>" alt="Imagen de fondo" >
-    <figcaption class="slidey_bg_caption rowcol1">
-      <p class="slidey_bg_text">
-        <br>
-        <span></span>
-      </p>
-    </figcaption>
-  </figure>
-  <figure class="slidey_card">
-    <img class="slidey_picture" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
-    <figcaption class="slidey_card_caption"></figcaption>
-  </figure>
+  <img class="slidey_bg rowcol1" src="<?php echo get_template_directory_uri() . '/assets/slidey_bg.jpg' ?>" alt="Imagen de fondo" >
+  <div class="slide_call">
+    <p class="slidey_bg_text">Nice to meet you!
+      <br>
+      <span>¿un café?</span>
+    </p>
+    <img class="circle_arrow right" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
+  </div>
+  <p class="html_deco">&lt;img&gt;</p>
+
+  <div class="slidey_progress">
+    <p class="slidey_progression">1/3</p>
+    <div class="slidey_bar"></div>
+  </div>
+
+  <div class="slidey_card_box">
+    <figure class="slidey_card first">
+      <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
+      <figcaption class="slidey_card_caption rowcol1">
+        <p>Tomás Moral</p>
+        <p>CEO</p>
+      </figcaption>
+    </figure>
+    <figure class="slidey_card">
+      <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
+      <figcaption class="slidey_card_caption rowcol1">
+        <p>Sofia Molinero</p>
+        <p>CEO</p>
+      </figcaption>
+    </figure>
+    <figure class="slidey_card last">
+      <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
+      <figcaption class="slidey_card_caption rowcol1">
+        <p>Ramiro Gomez</p>
+        <p>CEO</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+<section class="blurb_box">
+  <div class="blurb_title_box">
+    <h2 class="blurb_box_title rowcol1">Diseños <span>vibrantes</span> para<br>sites auto administrables</h2>
+    <p class="html_deco rowcol1">&lt;h2&gt;</p>
+  </div>
+  <div class="blurb first">
+    <img class="blurb_img" src="<?php echo get_template_directory_uri() . '/assets/blurb_img_1x2.png' ?>" alt="Icono decorativo del punto 1">
+    <p class="blurb_title">Te acompañamos en <br>cada paso</p>
+    <p class="blurb_text">Desde la creación de tu site, a su hosting y mantenimiento. No te vamos a engañar, nos gustan las relaciones largas.</p>
+  </div>
+  <div class="blurb">
+    <img class="blurb_img" src="<?php echo get_template_directory_uri() . '/assets/blurb_img_2x2.png' ?>" alt="Icono decorativo del punto 2">
+    <p class="blurb_title">Haz que tu web crezca <br>contigo cada día</p>
+    <p class="blurb_text">No te conformes y ten un site independiente. Crea una web escalable, capaz de crecer a la par de tu empresa.</p>
+  </div>
+  <div class="blurb last">
+    <img class="blurb_img" src="<?php echo get_template_directory_uri() . '/assets/blurb_img_3x2.png' ?>" alt=" Icono decorativo del punto 3">
+    <p class="blurb_title">Nuestro equipo se <br>adapta a ti</p>
+    <p class="blurb_text">Cuéntanos que necesitas y lo ponemos a tu disposición. ¿SEO, Diseño App, UI UX, o  un gestor 24/7?</p>
+  </div>
+</section>
+<section class="big_pics">
+  <h2 class="big_pics_title">Cada proyecto,<br><span>una web a medida</span></h2>
 </section>
 <?php get_footer(); ?>

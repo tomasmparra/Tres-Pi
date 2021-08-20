@@ -31,8 +31,14 @@ Version: 1.0
 6.2) =sticky_stuff:
 6.3) =hero:
 6.4) =decorations:
+6.4.1) =html_deco:
+6.4.2) =bold_italic:
+6.4.3) =funky_stripe:
+6.4.4) =circle_arrow:
 6.5) =dropdowney:
 6.6) =slidey:
+6.7) =blurbs:
+6.8) =big_pics:
 
 
 FIN DE MAPA DE CONTENIDOS */
@@ -55,11 +61,13 @@ FIN DE MAPA DE CONTENIDOS */
   que hacer facilmente diferentes versiones de la pagina */
 
   --lateral:1rem;
+  --lateral_alt: .5rem;
   --scrollbar_width:8px;
 
   /* COLORS */
 
   --funky_green: #0bbba9;
+  --funky_pale_green: #182725;
   --bg_grey: #1a1717;
   --raichu_gold: #ffb307;
   --deco_grey: #252222;
@@ -161,6 +169,8 @@ FIN DE MAPA DE CONTENIDOS */
 @media  screen and (min-width: 1200px) {
   :root {
     --lateral:7rem;
+    --lateral_alt: 4rem;
+
     --top_padding: 2.7rem;
     --sizeR: calc(var(--sizeRd) * 1px);
 
@@ -172,6 +182,7 @@ FIN DE MAPA DE CONTENIDOS */
 @media  screen and (min-width: 1600px) {
   :root {
     --lateral:8.5rem;
+    --lateral_alt: 5rem;
     --top_padding: 3.5rem;
     --sizeR: calc(var(--sizeRd) * 1px);
 
@@ -398,9 +409,7 @@ body.home{
   line-height: 1.63;
   letter-spacing: 0.8px;
 }
-.hero_arrow{
-  width: 177px;
-  height: auto;
+.hero .circle_arrow{
   position: absolute;
   bottom: 0;
   right: var(--lateral);
@@ -413,22 +422,36 @@ body.home{
                           6.4) =decorations:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
+
+/* 6.4.1) =html_deco: */
 .html_deco{
   font-size: 60px;
   font-weight: 800;
-  letter-spacing: 1.25px;
+  letter-spacing: 7px;
   color: var(--deco_grey);
 }
+
+/* 6.4.2) =bold_italic: */
 .bold_italic{
   font-weight: 700;
   font-style: italic;
 }
+
+/* 6.4.3) =funky_stripe: */
 .funky_stripe{
   width: 128px;
   height: 6px;
   background: var(--funky_green);
 }
 
+/* 6.4.4) =circle_arrow: */
+.circle_arrow{
+  width: 177px;
+  height: auto;
+}
+.circle_arrow.right{
+  transform: rotate(-90deg);
+}
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -511,6 +534,7 @@ body.home{
 }
 .dropdowny_CTA_text{
   font-size: 22px;
+  font-weight: normal;
   line-height: 1.18;
   letter-spacing: 1.1px;
   margin-right: 1rem;
@@ -527,24 +551,209 @@ body.home{
 --------------------------------------------------------------------------- */
 
 .slidey{
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: var(--lateral) max-content 1fr 1fr 1fr;
+  grid-template-rows: min-content min-content 1fr min-content min-content;
   color: white;
+  z-index: 0;
+  overflow-x: hidden;
 }
 .slidey_title{
  font-size: 50px;
- font-weight: normal;
+ font-weight: 800;
  letter-spacing: 1.04px;
  grid-column: 1/-1;
- padding-left: var(--lateral);
+ grid-row: 1;
+ padding:  0 0 1rem var(--lateral);
 }
 .slidey_bg{
   display: grid;
-  grid-column:1/9;
+  grid-column:1/5;
+  grid-row: 2/5;
 }
-.slidey_img{
+.slide_call{
+  grid-column: 2/3;
+  grid-row: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom:1rem;
+}
+.slide_call .circle_arrow{
+  margin: 0 1rem 0 2rem;
+}
+.slidey_bg_text {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.slidey_bg_text span {
+  font-weight: 400;
+  font-style: italic;
+}
+.slidey .html_deco{
+  padding: 4px 6.5rem 22px 5.5rem;
+}
 
+.slidey_progress{
+  grid-column: 2;
+  grid-row: 5;
+  grid-gap:7px;
+  display:grid;
+  margin:1.5rem 0 .5rem 0;
+}
+.slidey_bar{
+  width: 100%;
+  background: var(--funky_pale_green);
+  height: 7px;
+  position: relative;
+}
+.slidey_bar::after{
+  background: var(--funky_green);
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 33%;
+  left:0;
+  top: 0;
+}
+.slidey_progression{
+  font-style: italic;
+  font-size: 14px;
+}
+
+.slidey_card_box{
+  grid-column: 4/6;
+  grid-row: 3/6;
+  display:grid;
+  grid-auto-flow: column;
+  grid-gap:2rem;
+}
+.slidey_card{
+  display:grid;
+  position:relative;
+  width: 28vw;
+}
+.slidey_card.first{
+  margin-left: 0;
+}
+.slidey_card.last{
+  margin-right: 0;
+}
+.slidey_card_img{
+  width:100%;
+  height: 100%;
+}
+.slidey_card_caption{
+  transform:rotate(90deg);
+  transform-origin: top left;
+  position:relative;
+  top:1rem;
+  left:calc(100% - 1rem);
+  margin-bottom:auto;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.slidey_card_caption p:nth-child(2){
+  font-weight: 400;
+}
+
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.7) =blurbs:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+
+.blurb_box{
+  padding: 2.5rem var(--lateral) 7rem var(--lateral);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: white;
+  grid-row-gap: 4.5rem;
+}
+.blurb_title_box{
+  grid-column: 1/-1;
+  position: relative;
+  display: grid;
+  margin: auto;
+}
+.blurb_box_title{
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.blurb_box_title span{
+  font-style: italic;
+}
+.blurb_title_box .html_deco{
+  right: 0;
+  bottom: 0;
+  font-size: 100px;
+  line-height: 1;
+  width: min-content;
+  margin: auto 0 0 auto;
+  z-index: -1;
+  transform: translate(75%, 45%);
+
+}
+.blurb{
+  display: grid;
+  grid-gap: 2rem;
+  max-width: 280px;
+  margin: auto;
+}
+.blurb.first{
+  margin-left: 0;
+}
+.blurb.last{
+  margin-right: 0;
+}
+.blurb_img{
+  height: 197px;
+  width: auto;
+  margin: auto;
+}
+.blurb_title{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.75;
+  letter-spacing: 1px;
+}
+.blurb_text{
+  font-size: 16px;
+  line-height: 1.63;
+  font-weight: 100;
+  letter-spacing: 0.8px;
+}
+
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.8) =big_pics:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+.big_pics{
+  background: white;
+  display: grid;
+  padding: 5rem var(--lateral_alt) 5rem var(--lateral_alt);
+  color: var(--bg_grey);
+}
+.big_pics_title{
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 1.25px;
+  width: max-content;
+  margin: auto;
+  transform: translateX(-50%);
+
+}
+.big_pics_title span{
+  font-style: italic;
+  font-weight: 700;
 }
 
 
