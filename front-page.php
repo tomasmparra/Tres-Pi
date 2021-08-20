@@ -106,4 +106,7 @@
     <p class="blurb_text">Cuéntanos que necesitas y lo ponemos a tu disposición. ¿SEO, Diseño App, UI UX, o  un gestor 24/7?</p>
   </div>
 </section>
+<section class="big_pics">
+  <h2 class="big_pics_title">Cada proyecto,<br><span>una web a medida</span></h2>
+</section>
 <?php get_footer(); ?>

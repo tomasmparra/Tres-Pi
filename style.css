@@ -38,6 +38,7 @@ Version: 1.0
 6.5) =dropdowney:
 6.6) =slidey:
 6.7) =blurbs:
+6.8) =big_pics:
 
 
 FIN DE MAPA DE CONTENIDOS */
@@ -60,6 +61,7 @@ FIN DE MAPA DE CONTENIDOS */
   que hacer facilmente diferentes versiones de la pagina */
 
   --lateral:1rem;
+  --lateral_alt: .5rem;
   --scrollbar_width:8px;
 
   /* COLORS */
@@ -167,6 +169,8 @@ FIN DE MAPA DE CONTENIDOS */
 @media  screen and (min-width: 1200px) {
   :root {
     --lateral:7rem;
+    --lateral_alt: 4rem;
+
     --top_padding: 2.7rem;
     --sizeR: calc(var(--sizeRd) * 1px);
 
@@ -178,6 +182,7 @@ FIN DE MAPA DE CONTENIDOS */
 @media  screen and (min-width: 1600px) {
   :root {
     --lateral:8.5rem;
+    --lateral_alt: 5rem;
     --top_padding: 3.5rem;
     --sizeR: calc(var(--sizeRd) * 1px);
 
@@ -663,7 +668,7 @@ body.home{
 --------------------------------------------------------------------------- */
 
 .blurb_box{
-  padding: 2.5rem var(--lateral) 5rem var(--lateral);
+  padding: 2.5rem var(--lateral) 7rem var(--lateral);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: white;
@@ -714,14 +719,44 @@ body.home{
 }
 .blurb_title{
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.75;
+  letter-spacing: 1px;
 }
 .blurb_text{
   font-size: 16px;
   line-height: 1.63;
+  font-weight: 100;
   letter-spacing: 0.8px;
 }
+
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.8) =big_pics:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+.big_pics{
+  background: white;
+  display: grid;
+  padding: 5rem var(--lateral_alt) 5rem var(--lateral_alt);
+  color: var(--bg_grey);
+}
+.big_pics_title{
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 1.25px;
+  width: max-content;
+  margin: auto;
+  transform: translateX(-50%);
+
+}
+.big_pics_title span{
+  font-style: italic;
+  font-weight: 700;
+}
+
+
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                           6.69) =redDot:
