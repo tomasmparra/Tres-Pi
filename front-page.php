@@ -1,4 +1,8 @@
 <?php get_header(); ?>
+
+
+
+
 <section class="hero">
   <div class="hero_wording">
     <p class="html_deco">&lt;h1&gt;</p>
@@ -17,6 +21,10 @@
   ?>
   <img class="circle_arrow" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
 </section>
+
+
+
+
 <section class="dropdowny_box">
   <div class="dropdowny_title_text">
     <p class="dropdowny_title">All u need…</p>
@@ -44,6 +52,10 @@
     </div>
   </div>
 </section>
+
+
+
+
 <section class="slidey">
   <p class="slidey_title">El equipo</p>
   <img class="slidey_bg rowcol1" src="<?php echo get_template_directory_uri() . '/assets/slidey_bg.jpg' ?>" alt="Imagen de fondo" >
@@ -85,6 +97,10 @@
     </figure>
   </div>
 </section>
+
+
+
+
 <section class="blurb_box">
   <div class="blurb_title_box">
     <h2 class="blurb_box_title rowcol1">Diseños <span>vibrantes</span> para<br>sites auto administrables</h2>
@@ -106,7 +122,38 @@
     <p class="blurb_text">Cuéntanos que necesitas y lo ponemos a tu disposición. ¿SEO, Diseño App, UI UX, o  un gestor 24/7?</p>
   </div>
 </section>
+
+
+
+
 <section class="big_pics">
   <h2 class="big_pics_title">Cada proyecto,<br><span>una web a medida</span></h2>
+
+
+  <?php
+  $args = array(
+    'post_type' => 'proyecto',
+    'order' => 'ASC',
+  );
+  $loop = new WP_Query( $args );
+  $i = 0;
+  while ( $loop->have_posts() ) { $loop->the_post(); ?>
+    <figure class="pro <?= "pro_$i" ?>">
+      <?php
+      $config = array(
+        'id' => get_post_thumbnail_id( get_the_ID() ),
+        'class' => 'pro_img',
+        'sizes' => [['576', '100']],
+        'default_size' => '100',
+      );
+      responsive_img($config);
+      ?>
+      <figcaption class="pro_caption">
+        <h3 class="pro_title"><?= get_the_title() ?></h3>
+        <p class="pro_excerpt"><?= get_the_excerpt() ?></p>
+      </figcaption>
+    </figure>
+  <?php $i++;} ?>
+  <a class="big_pics_link" href="#">Ver todos los proyectos</a>
 </section>
 <?php get_footer(); ?>
