@@ -39,6 +39,10 @@ Version: 1.0
 6.6) =slidey:
 6.7) =blurbs:
 6.8) =big_pics:
+6.9) =MULTICARDS:
+6.9.1) =pro:
+
+6.69) =redDot:
 
 
 FIN DE MAPA DE CONTENIDOS */
@@ -242,6 +246,7 @@ ul,ol{list-style:none}
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 
+body.page-template-default,
 body.home{
   background: var(--bg_grey);
 }
@@ -416,6 +421,15 @@ body.home{
   transform: translateY(50%);
   z-index: 2;
 }
+
+
+
+/* =hero_serv */
+.hero_serv{
+  grid-template-columns: 500px 1fr;
+  grid-gap:6rem;
+}
+
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -755,6 +769,61 @@ body.home{
   font-style: italic;
   font-weight: 700;
 }
+.big_pics_link{
+  text-align: center;
+}
+
+
+
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.9) =MULTICARDS:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.9.1) =pro:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+
+.pro{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:3rem;
+  padding-bottom:3rem;
+}
+.pro_0{
+  grid-template-columns: 310px 1fr;
+  padding-left: 270px;
+}
+.pro:nth-child(2n) .pro_img{
+  order:2;
+}
+.pro_img{
+  width:100%;
+  height:auto;
+}
+.pro_caption{
+  margin-top:auto;
+}
+.pro_0 .pro_caption{
+  padding-bottom:3rem;
+}
+.pro_title{
+/* font-family: ArchivoRoman; */
+font-size: 20px;
+font-weight: bold;
+line-height: 1.75;
+margin-bottom:2rem;
+}
+.pro_excerpt{
+  line-height: 1.63;
+
+  font-size: 16px;
+}
 
 
 /* ---------------------------------------------------------------------------
@@ -778,4 +847,91 @@ body.home{
                           6.99) =footer
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.footer{}
+.footer{
+  color:white;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  /* padding: 3rem var(--lateral); */
+  z-index: 1;
+  grid-gap:2rem;
+  grid-column-gap: 5rem;
+}
+.footer_bg{
+  height:auto;
+  grid-column:1/-1;
+  grid-row:1/5;
+  z-index: -1;
+}
+
+.footer_title{
+  grid-column:1/3;
+  grid-row:1;
+  font-size:40px;
+  font-weight: bold;
+  margin-top:3rem;
+  text-align: center;
+}
+.footer_title span{
+  color:var(--funky_green);
+}
+.footer_CTA{
+  margin:auto;
+  grid-column:1/3;
+  grid-row:2;
+  font-size: 30px;
+  position:relative;
+}
+.footer_CTA::after{
+  content:'';
+  position:absolute;
+  bottom:-20px;
+  height:2px;
+  width:100%;
+  left:0;
+  background: white;
+}
+.contact{
+  grid-column: 1;
+  grid-row: 3;
+  margin-left:var(--lateral);
+}
+
+.naver{
+  display:grid;
+  grid-column: 2;
+  grid-row: 3;
+  margin-right:var(--lateral);
+  /* background: white; */
+}
+.naver svg{
+  font   : bold 65px Century Gothic, Arial;
+  width  : 100%;
+  height : 100px;
+}
+
+.naver text{
+  fill            : none;
+  stroke          : white;
+  stroke-width    : 2px;
+  stroke-linejoin : round;
+}
+
+.legal{
+  display: grid;
+  grid-auto-flow:column;
+  grid-gap:.5rem;
+  grid-column:1/-1;
+  grid-row:4;
+  align-items: center;
+  place-self:center;
+  margin-bottom:1rem;
+}
+.legal_deco{
+  height:16px;
+  width:2px;
+  background:#A0A0A0;
+}
+.legal_link{
+  color:#A0A0A0;
+  font-size: 16px;
+}
