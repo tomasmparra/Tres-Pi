@@ -16,8 +16,8 @@ $scrt = '6LcRuNAUAAAAALBu7Ymh0yxmTXTJmP0rsnkjGyj0';
   <?php wp_head(); ?>
   <style>
     :root{
-      --primary_color:<?php echo get_option( 'primary_color', '' ); ?>;
-      --secondary_color:<?php echo get_option( 'secondary_color', '' ); ?>;
+      --primary_color:<?= get_option( 'primary_color', '' ); ?>;
+      --secondary_color:<?= get_option( 'secondary_color', '' ); ?>;
     }
   </style>
 </head>
@@ -27,13 +27,13 @@ $scrt = '6LcRuNAUAAAAALBu7Ymh0yxmTXTJmP0rsnkjGyj0';
   <header class="header" id="header">
 
     <a class="sticky_imago" href="<?php echo get_site_url(); ?>">
-      <img class="iso" src="<?php echo get_template_directory_uri() . '/assets/iso.png' ?>" alt="Isotipo de Tres Pi">
-      <img class="logo" src="<?php echo get_template_directory_uri() . '/assets/logo.png' ?>" alt="Logotipo de Tres Pi">
+      <img class="iso" src="<?php echo get_template_directory_uri() . '/assets/iso.svg' ?>" alt="Isotipo de Tres Pi">
+      <img class="logo" src="<?php echo get_template_directory_uri() . '/assets/logo.svg' ?>" alt="Logotipo de Tres Pi">
     </a>
 
     <?php
     $args = array(
-      'theme_location' => 'Header',
+      'theme_location' => 'header',
       'depth' => 0,
       'container'	=> false,
       'fallback_cb' => false,
