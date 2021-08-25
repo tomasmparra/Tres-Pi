@@ -10,9 +10,10 @@ $scrt = '6LcRuNAUAAAAALBu7Ymh0yxmTXTJmP0rsnkjGyj0';
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,1,400;0,1,700;0,1,800&display=swap" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0..1,100..900,62..125&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;1,400;0,500;1,500;0,600;1,600;0,700;1,700;0,800;1,800&display=swap" rel="stylesheet"> -->
   <?php wp_head(); ?>
   <style>
     :root{
@@ -26,9 +27,9 @@ $scrt = '6LcRuNAUAAAAALBu7Ymh0yxmTXTJmP0rsnkjGyj0';
 
   <header class="header" id="header">
 
-    <a class="sticky_imago" href="<?php echo get_site_url(); ?>">
-      <img class="iso" src="<?php echo get_template_directory_uri() . '/assets/iso.svg' ?>" alt="Isotipo de Tres Pi">
-      <img class="logo" src="<?php echo get_template_directory_uri() . '/assets/logo.svg' ?>" alt="Logotipo de Tres Pi">
+    <a class="sticky_imago" href="<?= get_site_url(); ?>">
+      <?php require_once 'assets/iso.svg'; ?>
+      <?php require_once 'assets/logo.svg'; ?>
     </a>
 
     <?php
