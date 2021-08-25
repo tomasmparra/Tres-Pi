@@ -13,7 +13,7 @@ w.onload=()=>{
   // Modules setup
 	growUpController.setup()
 	obseController.setup()
-  d.getElementById("load").style.top="-100vh";
+  // d.getElementById("load").style.top="-100vh";
 }
 
 
@@ -117,31 +117,6 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-
-
-
-
-
-
-
-
-
-
-async function ajax2(formData, url = lt_data.ajaxurl) {
-	try{
-		let response = await fetch(url, { method: 'POST', body: formData, });
-		return await response.json();
-	} catch ( err ) { console.error(err); }
-}
-
-async function ajax3(formData, url = lt_data.ajaxurl) {
-	try{
-		let response = await fetch(url, { method: 'POST', body: formData, });
-		return await response.text();
-	} catch ( err ) { console.error(err); }
-}
-
-
 
 
 
