@@ -103,7 +103,7 @@
 
 <section class="blurb_box">
   <div class="blurb_title_box">
-    <h2 class="blurb_box_title rowcol1">Diseños <span>vibrantes</span> para<br>sites auto administrables</h2>
+    <h2 class="blurb_box_title rowcol1">Diseños <i>vibrantes</i> para<br>sites auto administrables</h2>
     <p class="html_deco rowcol1">&lt;h2&gt;</p>
   </div>
   <div class="blurb first">
@@ -127,7 +127,7 @@
 
 
 <section class="big_pics">
-  <h2 class="big_pics_title">Cada proyecto,<br><span>una web a medida</span></h2>
+  <h2 class="big_pics_title">Cada proyecto,<br><span><i>una web a medida</i></span></h2>
 
 
   <?php
