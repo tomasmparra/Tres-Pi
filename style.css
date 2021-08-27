@@ -857,8 +857,6 @@ body.home{
 }
 
 
-
-
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                           6.09) =MULTICARDS:
@@ -896,7 +894,7 @@ body.home{
   line-height: 1.63;
   font-size: 16px;
 }
-.pro:nth-child(2n) .pro_img{
+.pro_2 .pro_img{
   order:2;
 }
 
@@ -933,6 +931,7 @@ body.home{
 .pro_1 .pro_caption{
   padding:0 0 2rem .5rem;
 }
+
 /* =pro_2: */
 .pro_2{
   padding: 4.5rem 0 3.5rem 0;
@@ -942,10 +941,18 @@ body.home{
 .pro_2 .pro_caption{
   margin: auto 0 4rem auto;
 }
+.pro_2 .pro_img{
+  order:2;
+}
+
 /* =pro_3: */
-
-
-
+.pro_3{
+  padding: 2.2rem 0 3.5rem 3.7rem;
+  grid-template-columns: 1.4fr 1fr;
+}
+.pro_3 .pro_caption{
+  margin-top: 3rem;
+}
 
 
 
