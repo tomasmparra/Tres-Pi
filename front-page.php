@@ -150,8 +150,8 @@
       ?>
       <?php
       $config = array(
-        'id' => get_post_thumbnail_id( get_the_ID() ),
-        'class' => 'pro_img',
+        'slug' => get_post_meta( $post->ID, 'FP_alt_img', true ),
+        'class' => 'pro_alt_img',
         'sizes' => [['576', '100']],
         'default_size' => '100',
       );
