@@ -148,6 +148,15 @@
       );
       responsive_img($config);
       ?>
+      <?php
+      $config = array(
+        'slug' => get_post_meta( $post->ID, 'FP_alt_img', true ),
+        'class' => 'pro_alt_img',
+        'sizes' => [['576', '100']],
+        'default_size' => '100',
+      );
+      responsive_img($config);
+      ?>
       <figcaption class="pro_caption">
         <h3 class="pro_title"><?= get_the_title() ?></h3>
         <p class="pro_excerpt"><?= get_the_excerpt() ?></p>
