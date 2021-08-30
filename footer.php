@@ -52,15 +52,19 @@
         <div class="footer_CTA_deco"></div>
       </div>
     </div>
-
-    <!-- <form class="contact" action="index.html" method="post">
-      <p class="contact_title">Escribenos</p>
-      <input class="contact_input" type="email" name="" value="">
-      <textarea class="contact_input" name="name" rows="8" cols="80"></textarea>
-      <label for="">
-        <input type="checkbox" name="" value="">
-        <p>Acepto los términos y condiciones lorem ipsum dolor sir amet et sicue era alectra esta est locua siem.</p>
-      </label>
+    <form class="contact" action="index.html" method="post">
+      <p class="contact_title">Escríbenos</p>
+      <input class="contact_input" type="email" name="" value="" placeholder="Tu email de contacto…">
+      <input class="contact_input textarea" type="textarea" name="name"  placeholder="Tu mensaje…"></input>
+      <div class="contact_acceptance">
+        <label class="check_box">Acepto los términos y condiciones lorem ipsum dolor <br>sit amet et sicue era alectra esta est locua siem.
+          <input class="checkbox" type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <button class="send_form_button" type="submit">
+          <img class="footer_CTA_arrow" src="<?php echo get_template_directory_uri() . '/assets/dropdowny_arrow_white.png' ?>" alt="Icono de flecha">
+        </button>
+      </div>
     </form>
 
     <nav class="naver">
@@ -76,7 +80,7 @@
         <a href="https://google.com"><text y="50">Nos define</text></a>
       </svg>
     </nav>
-
+    
     <ul class="legal">
       <li class="legal_li"><a class="legal_link" href="#">© Trespi 2021</a></li>
       <div class="legal_deco"></div>
@@ -85,7 +89,7 @@
       <li class="legal_li"><a class="legal_link" href="#">Aviso Legal</a></li>
       <div class="legal_deco"></div>
       <li class="legal_li"><a class="legal_link" href="#">Política de Privacidad</a></li>
-    </ul> -->
+    </ul>
   </footer>
   <?php wp_footer(); ?>
 </body>
