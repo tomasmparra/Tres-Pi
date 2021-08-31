@@ -24,8 +24,7 @@ $scrt = '6LcRuNAUAAAAALBu7Ymh0yxmTXTJmP0rsnkjGyj0';
 </head>
 <body <?php body_class(); ?>>
 
-
-  <header class="header" id="header">
+  <header class="header <?= isset($args['class']) ? $args['class'] : '' ?>" id="header" data-observe="#header_activator">
 
     <a class="sticky_imago" href="<?= get_site_url(); ?>">
       <?php require_once 'assets/iso.svg'; ?>
