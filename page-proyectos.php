@@ -16,7 +16,7 @@
     );
     $banners=new WP_Query($args);
     while($banners->have_posts()){$banners->the_post();?>
-      <div class="blah">
+      <a class="blah" href="<?= get_permalink($post) ?>">
         <img class="blah_img" loading="lazy" src="<?php the_post_thumbnail_url(); ?>" alt="">
         <div class="blah_caption">
           <p class="blah_type">Diseño UX UI</p>
@@ -24,7 +24,7 @@
           <div class="blah_deco"></div>
           <p class="blah_text">No te conformes. Hazte independiente. Crea una web escalable, capaz de crecer a la par de tu empresa.</p>
         </div>
-      </div>
+      </a>
     <?php } wp_reset_query(); ?>
   </div>
 
