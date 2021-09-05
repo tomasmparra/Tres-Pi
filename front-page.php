@@ -165,4 +165,5 @@
   <?php $i++;} ?>
   <a class="big_pics_link" href="#">Ver todos los proyectos</a>
 </section>
-<?php get_footer(); ?>
+
+<?php //get_footer(); ?>

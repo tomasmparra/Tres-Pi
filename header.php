@@ -24,7 +24,10 @@ $scrt = '6LcRuNAUAAAAALBu7Ymh0yxmTXTJmP0rsnkjGyj0';
 </head>
 <body <?php body_class(); ?>>
 
+
+
   <header class="header <?= isset($args['class']) ? $args['class'] : '' ?>" id="header" data-observe="#header_activator">
+
 
     <a class="sticky_imago" href="<?= get_site_url(); ?>">
       <?php require_once 'assets/iso.svg'; ?>
@@ -42,6 +45,6 @@ $scrt = '6LcRuNAUAAAAALBu7Ymh0yxmTXTJmP0rsnkjGyj0';
     wp_nav_menu($args);
     ?>
 
-    <p class="sticky_CTA" href="#">Cotiza tu proyecto</p>
+    <p class="sticky_CTA" href="#">Comienza tu proyecto</p>
 
   </header>
