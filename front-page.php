@@ -25,7 +25,7 @@
 
 
 
-<section class="dropdowny_box onlyDesktopG">
+<section class="dropdowny_box">
   <div class="dropdowny_title_text">
     <p class="dropdowny_title">All u need…</p>
     <div class="dropdowny_img_box">
@@ -56,20 +56,20 @@
 
 
 
-<section class="slidey onlyDesktopG">
+<section class="slidey">
   <p class="slidey_title">El equipo</p>
-  <img class="slidey_bg rowcol1" src="<?php echo get_template_directory_uri() . '/assets/slidey_bg.jpg' ?>" alt="Imagen de fondo" >
+  <img class="slidey_bg" src="<?php echo get_template_directory_uri() . '/assets/slidey_bg.jpg' ?>" alt="Imagen de fondo" >
   <div class="slide_call">
-    <p class="slidey_bg_text">Nice to meet you!
+    <p class="slidey_bg_text onlyDesktopG">Nice to meet you!
       <br>
       <span>¿un café?</span>
     </p>
-    <img class="circle_arrow right" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
+    <img class="circle_arrow" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
   </div>
-  <p class="html_deco">&lt;img&gt;</p>
+  <p class="html_deco onlyDesktopG">&lt;img&gt;</p>
 
   <div class="slidey_progress">
-    <p class="slidey_progression">1/3</p>
+    <p class="slidey_progression onlyDesktopG">1/3</p>
     <div class="slidey_bar"></div>
   </div>
 
@@ -101,10 +101,10 @@
 
 
 
-<section class="blurb_box onlyDesktopG">
+<section class="blurb_box">
   <div class="blurb_title_box">
     <h2 class="blurb_box_title rowcol1">Diseños <i>vibrantes</i> para<br>sites auto administrables</h2>
-    <p class="html_deco rowcol1">&lt;h2&gt;</p>
+    <p class="html_deco rowcol1 onlyDesktopG">&lt;h2&gt;</p>
   </div>
   <div class="blurb first">
     <img class="blurb_img" src="<?php echo get_template_directory_uri() . '/assets/blurb_img_1x2.png' ?>" alt="Icono decorativo del punto 1">
@@ -166,4 +166,4 @@
   <a class="big_pics_link" href="#">Ver todos los proyectos</a>
 </section>
 
-<?php //get_footer(); ?>
+<?php get_footer(); ?>
