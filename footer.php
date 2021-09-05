@@ -1,5 +1,5 @@
 
-  <footer class="footer" id="footer">
+  <footer class="footer onlyDesktopG" id="footer">
     <img class="footer_bg" src="<?php echo get_template_directory_uri() . '/assets/footer_bgx2.jpg' ?>" alt="">
     <div class="footer_title_box">
       <h4 class="footer_title">¿Tienes un proyecto en mente?</h4>

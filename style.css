@@ -72,7 +72,7 @@ FIN DE MAPA DE CONTENIDOS */
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
-                              1) =ROOT:
+                              1) ?ROOT:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 
@@ -85,8 +85,8 @@ FIN DE MAPA DE CONTENIDOS */
   --------------------------------------------------------------------------- */
   /* la idea de esto es que sean como controles con los
   que hacer facilmente diferentes versiones de la pagina */
-
-  --lateral:1rem;
+  /* ?lateral */
+  --lateral:36px;
   --lateral_alt: .5rem;
   --scrollbar_width:8px;
 
@@ -100,7 +100,9 @@ FIN DE MAPA DE CONTENIDOS */
   --deco_grey2: #C1C1C1;
 
 
-
+  /* FONTS */
+  --font_normal:'Archivo', sans-serif;
+  --font_italic:'Archivo-Italic', sans-serif;
 
   /* SIZES */
   /* Al editar los tamaños, hacerlo siempre sin unidades
@@ -121,12 +123,47 @@ FIN DE MAPA DE CONTENIDOS */
   --onlyMobileG:grid;
 
   /* ?HEADER */
+  --top_padding: 2.7rem;
+
+  /* ?nav_bar */
+  --nav_bar_display:none;
+
+  /* ?sticky_stuff: */
+  --logo_display:none;
+  --sticky_CTA_font_family: var(--font_normal);
+  --sticky_CTA_font_size:14px;
+  --sticky_CTA_font_weight:500;
+  --sticky_CTA_underline_display:none;
+  --sticky_imago_transform:none;
+  --sticky_imago_left:var(--lateral);
+
+  /* ?hero */
+  --hero_GTC: 1fr;
+  --hero_grid_gap:4rem;
+  --hero_wording_GC:1;
+  --hero_img_GC:1;
+  --hero_img_GR:2;
+  --hero_circle_arrow_GC:1;
+  --hero_circle_arrow_GR:2;
+  --hero_circle_arrow_margin_L:10px;
+  --hero_html_deco_display:none;
+  --hero_copy_font_size:24px;
+  --hero_copy_padding_R:calc(var(--lateral) + 50px);
+  --hero_text_padding_R:var(--lateral);
+  --hero_text_font_weight:250;
+
+  --funky_stripe_height:2px;
+
+  /* ?circle_arrow */
+  --circle_arrow_width:75px;
+
 
   /* ?hero */
   --hero_wording_GC: 1;
   --hero_img_GC: 1;
   --hero_img_GR: 2;
   --sticly_imago_left: calc(var(--lateral) / 5);
+  
   /* ?FOOTER */
 }
 /* ---------------------------------------------------------------------------
@@ -177,7 +214,40 @@ FIN DE MAPA DE CONTENIDOS */
     --lateral_alt: 3rem;
 
     /* ?HEADER */
+
+    /* ?nav_bar */
+    --nav_bar_display:grid;
+
+    /* ?sticky_stuff: */
+    --sticky_CTA_font_family: var(--font_italic);
+    --sticky_CTA_underline_display:grid;
+    --sticky_CTA_font_size:18px;
+    --sticky_CTA_font_weight:800;
+    --logo_display:grid;
+    --sticky_imago_transform:translateX(-50%);
+    --sticky_imago_left:calc(var(--lateral) / 2);
     --sticly_imago_left: calc(var(--lateral) / 5);
+
+
+    /* ?hero */
+    --hero_GTC: 1fr 300px 1fr 180px var(--lateral);
+    --hero_grid_gap:0;
+    --hero_wording_GC:1/3;
+    --hero_img_GC:2/6;
+    --hero_img_GR:1;
+    --hero_circle_arrow_GC:4;
+    --hero_circle_arrow_GR:1;
+    --hero_circle_arrow_margin_L:0;
+    --hero_html_deco_display:block;
+    --hero_copy_font_size:44px;
+    --hero_copy_padding_R:0;
+    --hero_text_padding_R:5rem;
+    --hero_text_font_weight:400;
+
+    --funky_stripe_height:6px;
+
+    /* ?circle_arrow */
+    --circle_arrow_width:180px;
 
     /* ?FOOTER */
   }
@@ -322,8 +392,8 @@ FIN DE MAPA DE CONTENIDOS */
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 :root{
-  --font_normal:'Archivo', sans-serif;
-  --font_italic:'Archivo-Italic', sans-serif;
+  /* --font_normal:'Archivo', sans-serif; */
+  /* --font_italic:'Archivo-Italic', sans-serif; */
 }
 *{
   box-sizing:border-box;
@@ -363,10 +433,10 @@ body.home{
 }
 
 .rowcol1{grid-row:1;grid-column:1}
-.onlyDesktopF{display:var(--onlyDesktopF)}
-.onlyDesktopG{display:var(--onlyDesktopG)}
-.onlyMobileF{display:var(--onlyMobileF)}
-.onlyMobileG{display:var(--onlyMobileG)}
+.onlyDesktopF{display:var(--onlyDesktopF)!important}
+.onlyDesktopG{display:var(--onlyDesktopG)!important}
+.onlyMobileF{display:var(--onlyMobileF)!important}
+.onlyMobileG{display:var(--onlyMobileG)!important}
 
 
 .flex2,.flex3,.flex4{display:flex;flex-wrap:wrap}
@@ -409,7 +479,7 @@ body.home{
   position: relative;
   top: 2.5rem;
   height: 0;
-  display: grid;
+  display: var(--nav_bar_display);
   grid-auto-flow: column;
   grid-auto-columns: max-content;
   grid-column-gap: 4rem;
@@ -451,7 +521,10 @@ body.home{
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 .iso {width:38px}
-.logo{width:48px}
+.logo{
+  display: var(--logo_display);
+  width:48px;
+}
 .page-proyectos .sticky_imago .main_color,
 .single-proyecto .observed .sticky_imago .main_color{fill:var(--bg_grey)}
 
@@ -460,7 +533,10 @@ body.home{
   display: grid;
   top: var(--top_padding);
   grid-row-gap: 1.5rem;
-  left: var(--sticly_imago_left);
+  left: var(--sticky_imago_left);
+  /* left: calc(var(--lateral) / 2); */
+  transform: var(--sticky_imago_transform);
+  /* transform: translateX(-50%); */
   transform: translateX(-50%);
   place-items: center;
 }
@@ -469,9 +545,12 @@ body.home{
   position: fixed;
   right: var(--lateral);
   top: var(--top_padding);
-  font-size: 18px;
-  font-weight: 800;
-  font-family: var(--font_italic);
+  font-size:var(--sticky_CTA_font_size);
+  /* font-size: 18px; */
+  font-weight: var(--sticky_CTA_font_weight);
+  /* font-weight: 800; */
+  /* font-family: var(--font_italic); */
+  font-family: var(--sticky_CTA_font_family);
   letter-spacing: 0.82px;
   color: var(--raichu_gold);
   cursor: pointer;
@@ -479,6 +558,8 @@ body.home{
 .sticky_CTA::after{
   content: ' ';
   position: absolute;
+  /* display:none; */
+  display:var(--sticky_CTA_underline_display);
   bottom: -12px;
   left: 0;
   width: 100%;
@@ -500,7 +581,13 @@ body.home{
 .hero{
   margin: 8.5rem 0 calc(88px + 2.5rem) var(--lateral);
   display: grid;
+  grid-gap:var(--hero_grid_gap);
   position: relative;
+  grid-template-columns: var(--hero_GTC);
+  /* grid-template-columns: 1fr 300px 1fr 180px var(--lateral); */
+}
+.hero .html_deco{
+  display:var(--hero_html_deco_display)
 }
 .hero_wording{
   display: grid;
@@ -514,27 +601,36 @@ body.home{
 }
 .hero_img{
   grid-column: var(--hero_img_GC);
+  /* grid-column: 2/6; */
   grid-row: var(--hero_img_GR);
+  /* grid-row: 1; */
   z-index: 1;
   width: 100%;
   height: auto;
 }
 .hero_copy{
-  font-size: 44px;
+  font-size:var(--hero_copy_font_size);
+  /* font-size: 44px; */
   /* font-weight: 800; */
   line-height: 1.36;
   letter-spacing: 0.92px;
+  padding-right: var(--hero_copy_padding_R);
 }
 .hero_text{
-  padding-right: 5rem;
+  padding-right: var(--hero_text_padding_R);
+  /* padding-right: 5rem; */
   font-size: 16px;
+  font-weight: var(--hero_text_font_weight);
   line-height: 1.63;
   letter-spacing: 0.8px;
 }
 .hero .circle_arrow{
-  position: absolute;
-  bottom: 0;
-  right: var(--lateral);
+  grid-column: var(--hero_circle_arrow_GC);
+  /* grid-column: 4; */
+  margin-top:auto;
+  margin-left: var(--hero_circle_arrow_margin_L);
+  grid-row: var(--hero_circle_arrow_GR);
+  /* grid-row:1; */
   transform: translateY(50%);
   z-index: 2;
 }
@@ -605,19 +701,21 @@ body.home{
 /* 6.04.2) =bold_italic: */
 .bold_italic{
   font-weight: 700;
-  font-style: italic;
+  font-family: var(--font_italic);
 }
 
 /* 6.04.3) =funky_stripe: */
 .funky_stripe{
   width: 128px;
-  height: 6px;
+  height: var(--funky_stripe_height);
+  /* height: 6px; */
   background: var(--funky_green);
 }
 
 /* 6.04.4) =circle_arrow: */
 .circle_arrow{
-  width: 180px;
+  width: var(--circle_arrow_width);
+  /* width: 180px; */
   height: auto;
 }
 .circle_arrow.right{
