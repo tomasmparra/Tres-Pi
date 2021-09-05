@@ -25,7 +25,7 @@
 
 
 
-<section class="dropdowny_box">
+<section class="dropdowny_box onlyDesktopG">
   <div class="dropdowny_title_text">
     <p class="dropdowny_title">All u need…</p>
     <div class="dropdowny_img_box">
@@ -56,7 +56,7 @@
 
 
 
-<section class="slidey">
+<section class="slidey onlyDesktopG">
   <p class="slidey_title">El equipo</p>
   <img class="slidey_bg rowcol1" src="<?php echo get_template_directory_uri() . '/assets/slidey_bg.jpg' ?>" alt="Imagen de fondo" >
   <div class="slide_call">
@@ -101,7 +101,7 @@
 
 
 
-<section class="blurb_box">
+<section class="blurb_box onlyDesktopG">
   <div class="blurb_title_box">
     <h2 class="blurb_box_title rowcol1">Diseños <i>vibrantes</i> para<br>sites auto administrables</h2>
     <p class="html_deco rowcol1">&lt;h2&gt;</p>
@@ -126,7 +126,7 @@
 
 
 
-<section class="big_pics">
+<section class="big_pics onlyDesktopG">
   <h2 class="big_pics_title">Cada proyecto,<br><span><i>una web a medida</i></span></h2>
 
 

@@ -42,6 +42,6 @@ $scrt = '6LcRuNAUAAAAALBu7Ymh0yxmTXTJmP0rsnkjGyj0';
     wp_nav_menu($args);
     ?>
 
-    <p class="sticky_CTA" href="#">Comienza tu proyecto</p>
+    <p class="sticky_CTA" href="#">Cotiza tu proyecto</p>
 
   </header>
