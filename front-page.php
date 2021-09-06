@@ -126,7 +126,7 @@
 
 
 
-<section class="big_pics onlyDesktopG">
+<section class="big_pics">
   <h2 class="big_pics_title">Cada proyecto,<br><span><i>una web a medida</i></span></h2>
 
 

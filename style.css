@@ -87,7 +87,7 @@ FIN DE MAPA DE CONTENIDOS */
   que hacer facilmente diferentes versiones de la pagina */
   /* ?lateral */
   --lateral:36px;
-  --lateral_alt: .5rem;
+  --lateral_alt: 2rem;
   --scrollbar_width:12px;
 
   /* COLORS */
@@ -202,6 +202,51 @@ FIN DE MAPA DE CONTENIDOS */
   --blurb_text_align:center;
   --blurb_title_font_size:18px;
 
+  /* ?big_pics */
+  --big_pics_title_width: auto;
+  --big_pics_title_FS: 18px;
+  --big_pics_title_margin: 0;
+  --big_pics_padding: 3.5rem var(--lateral_alt) 5rem var(--lateral_alt);
+  --big_pics_link_M: 3rem auto auto auto;
+  --big_pics_link_FS: 18px;
+
+
+  /* ?pro */
+
+  --pro_GTC: 1fr;
+  --pro_GG: 1.8rem;
+  --pro_title_FS: 16px;
+  --pro_title_MB: 1rem;
+
+
+  --pro0_GTC: 1fr;
+  --pro0_img_order: unset;
+  --pro_0_caption_PB: 1.5rem;
+
+  --pro1_GTC: 1fr;
+  --pro_1_P: 2.3rem 0 1rem 0;
+  --pro_1_img_PL: 0;
+
+
+  --pro2_GTC: 1fr;
+  --pro_2_P: 1rem 0 1.5rem 0;
+  --pro2_img_order: unset;
+  --pro_2_img_M: auto 0 auto auto;
+  --pro_2_img_transform: translateX(var(--lateral_alt));
+  --pro2_caption_M: auto 0 1rem auto;
+
+
+  --pro3_GTC: 1fr;
+  --pro3_P: 1rem 3.5rem 0 0;
+  --pro3_altImg_margin: 3rem auto auto 4.5rem;
+  --pro3_caption_M: 5rem;
+
+  --pro0_img_margin: 2.5rem 0 0 0;
+  --pro0_img_transform: translateX(var(--lateral_alt));
+  --pro0_img_padding_left: 3rem;
+
+  --pro0_caption_after_content: none;
+
   /* ?FOOTER */
 }
 /* ---------------------------------------------------------------------------
@@ -234,6 +279,10 @@ FIN DE MAPA DE CONTENIDOS */
 @media screen and (min-width: 576px) {
   :root {
     /* ?HEADER */
+
+    /* ?big_pics */
+    --big_pics_title_FS: 22px;
+
     /* ?FOOTER */
   }
 }
@@ -252,6 +301,9 @@ FIN DE MAPA DE CONTENIDOS */
     --lateral_alt: 3rem;
 
     /* ?HEADER */
+
+    /* ?big_pics */
+    --big_pics_title_FS: 32px;
 
 
     /* ?FOOTER */
@@ -358,6 +410,50 @@ FIN DE MAPA DE CONTENIDOS */
     --blurb_text_align:left;
     --blurb_title_font_size:20px;
 
+    /* ?big_pics */
+    --big_pics_title_width: max-content;
+    --big_pics_title_FS: 42px;
+    --big_pics_title_margin: 0;
+    --big_pics_padding: 7rem var(--lateral_alt) 5rem var(--lateral_alt);
+    --pro0_img_order: 2;
+    --big_pics_link_M: 4.5rem auto auto auto;
+    --big_pics_link_FS: 30px;
+
+
+    /* ?pro */
+    --pro_GTC: 1fr 1fr;
+    --pro_GG: 3rem;
+    --pro_title_FS: 20px;
+    --pro_title_MB: 2rem;
+
+    --pro0_GTC: 300px 1fr;
+    --pro_0_caption_PB: 3.5rem;
+
+    --pro1_GTC: 1.6fr 1fr;
+    --pro_1_P: 4.5rem 0 3.5rem 0;
+    --pro_1_img_PL: 92px;
+
+
+
+    --pro2_GTC: 1fr 2.2fr;
+    --pro_2_P: 4.5rem 0 3.5rem 0;
+    --pro2_img_order: 2;
+    --pro_2_img_M: unset;
+    --pro_2_img_transform: translateX(0);
+    --pro2_caption_M: auto 0 4rem auto;
+
+
+
+    --pro3_GTC: 1.4fr 1fr;
+    --pro3_P: 2.2rem 0 12rem 3.7rem;
+    --pro3_caption_M: 3rem;
+
+    --pro0_img_margin: unset;
+    --pro0_img_transform: translateX(0);
+    --pro0_img_padding_left: unset;
+
+    --pro0_caption_after_content: ' ';
+
 
     /* ?FOOTER */
   }
@@ -408,6 +504,8 @@ FIN DE MAPA DE CONTENIDOS */
     /* ?pro */
     --pro0_padding: 270px;
     --pro3_altImg_margin: auto 0 0 auto;
+    --big_pics_title_FS: 60px;
+
 
 
     /* ?FOOTER */
@@ -1118,15 +1216,15 @@ body.home{
 .big_pics{
   background: white;
   display: grid;
-  padding: 7rem var(--lateral_alt) 5rem var(--lateral_alt);
+  padding: var(--big_pics_padding);
   color: var(--bg_grey);
 }
 .big_pics_title{
-  font-size: 60px;
+  font-size: var(--big_pics_title_FS);
   font-weight: 800;
   letter-spacing: 1.25px;
-  width: max-content;
-  margin: auto;
+  width: var(--big_pics_title_width);
+  margin: var(--big_pics_title_margin);
   transform: var(--big_pics_title_padding);
 
 }
@@ -1134,8 +1232,8 @@ body.home{
   font-weight: 600;
 }
 .big_pics_link{
-  margin: 4.5rem auto auto auto;
-  font-size: 30px;
+  margin: var(--big_pics_link_M);
+  font-size: var(--big_pics_link_FS);
   font-weight: 200;
   letter-spacing: 0.63px;
   color: var(--funky_green);
@@ -1167,9 +1265,9 @@ body.home{
 
 .pro{
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap:3rem;
-  padding-bottom:3rem;
+  grid-template-columns: var(--pro_GTC);
+  grid-gap: var(--pro_GG);
+  padding-bottom: var(--pro_PB);
   position: relative;
 }
 .pro_img{
@@ -1184,34 +1282,34 @@ body.home{
 }
 
 .pro_title{
-  font-size: 20px;
+  font-size: var(--pro_title_FS);
   font-weight: bold;
   line-height: 1.75;
-  margin-bottom:2rem;
+  margin-bottom: var(--pro_title_MB);
 }
 .pro_excerpt{
   line-height: 1.63;
   font-size: 16px;
 }
-.pro_2 .pro_img{
-  order:2;
-}
 
 /* =pro_0: */
 .pro_0{
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: var(--pro0_GTC);
   padding-left: var(--pro0_padding);
 }
 .pro_0 .pro_img{
-  order: 2;
+  order: var(--pro0_img_order);
+  margin: var(--pro0_img_margin);
+  transform: var(--pro0_img_transform);
+  padding-left: var(--pro0_img_padding_left);
 }
 .pro_0 .pro_caption{
-  padding-bottom:3.5rem;
+  padding-bottom: var(--pro_0_caption_PB);
   position: relative;
 }
 .pro_0 .pro_caption::after{
   --pro0AfterSize: 177px;
-  content: ' ';
+  content: var(--pro0_caption_after_content);
   position: absolute;
   width: var(--pro0AfterSize);
   height: var(--pro0AfterSize);
@@ -1224,11 +1322,11 @@ body.home{
 
 /* =pro_1: */
 .pro_1{
-  padding: 4.5rem 0 3.5rem 0;
-  grid-template-columns: 1.6fr 1fr;
+  padding: var(--pro_1_P);
+  grid-template-columns: var(--pro1_GTC);
 }
 .pro_1 .pro_img{
-  padding-left: 92px;
+  padding-left: var(--pro_1_img_PL);
 }
 .pro_1 .pro_caption{
   padding:0 0 2rem .5rem;
@@ -1236,24 +1334,26 @@ body.home{
 
 /* =pro_2: */
 .pro_2{
-  padding: 4.5rem 0 3.5rem 0;
-  grid-template-columns: 1fr 2.2fr;
+  padding: var(--pro_2_P);
+  grid-template-columns: var(--pro2_GTC);
   grid-gap: 2rem;
 }
 .pro_2 .pro_caption{
-  margin: auto 0 4rem auto;
+  margin: var(--pro2_caption_M);
 }
 .pro_2 .pro_img{
-  order:2;
+  order:var(--pro2_img_order);
+  margin: var(--pro_2_img_M);
+  transform: var(--pro_2_img_transform);
 }
 
 /* =pro_3: */
 .pro_3{
-  padding: 2.2rem 0 12rem 3.7rem;
-  grid-template-columns: 1.4fr 1fr;
+  padding: var(--pro3_P);
+  grid-template-columns: var(--pro3_GTC);
 }
 .pro_3 .pro_caption{
-  margin-top: 3rem;
+  margin-top: var(--pro3_caption_M);
 }
 .pro_3 .pro_img{
   grid-column: 1;
