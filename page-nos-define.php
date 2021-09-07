@@ -41,7 +41,7 @@
 </section>
 
 
-<section class="equipo">
+<section class="equipo onlyDesktopG">
   <p class="equipo_title">Un equipo multidisciplinar y lorem ipsum dolor</p>
   <p class="html_deco">&lt;h2&gt;</p>
 
@@ -68,7 +68,7 @@
 </section>
 
 
-<section class="colabs">
+<section class="colabs onlyDesktopG">
   <p class="colab_title">Colaboradores</p>
 
   <div class="colab">

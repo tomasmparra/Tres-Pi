@@ -31,7 +31,7 @@
 
 
 
-<section class="method onlyDesktopG">
+<section class="method">
   <h3 class="method_title">Nuestra metodología <br><span>para trabajar juntos</span></h3>
 
   <div class="proceed">
@@ -78,7 +78,7 @@
 </section>
 
 
-<section class="shog onlyDesktopG">
+<section class="shog">
   <div class="shog_slid">
     <img class="" src="<?= get_template_directory_uri() . '/assets/typing.jpg' ?>" alt="">
     <img class="circle_arrow" src="<?= get_template_directory_uri() . '/assets/circle_arrow.svg' ?>" alt="Scroll down button">
@@ -87,7 +87,7 @@
 </section>
 
 
-<section class="faq onlyDesktopG">
+<section class="faq">
   <h5 class="faq_title">¿Tienes alguna consulta?</h5>
   <p class="faq_subtitle">Quizá podemos resolverla fácilmente…</p>
   <div class="faq_deco"></div>
