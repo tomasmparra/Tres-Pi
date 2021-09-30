@@ -239,7 +239,7 @@ FIN DE MAPA DE CONTENIDOS */
   --pro3_GTC: 1fr;
   --pro3_P: 1rem 3.5rem 0 0;
   --pro3_altImg_margin: 3rem auto auto 4.5rem;
-  --pro3_caption_M: 5rem;
+  --pro3_caption_M: 0rem;
 
   --pro0_img_margin: 2.5rem 0 0 0;
   --pro0_img_transform: translateX(var(--lateral_alt));
@@ -573,7 +573,7 @@ FIN DE MAPA DE CONTENIDOS */
     --sticly_imago_left: calc(var(--lateral) / 2);
 
     /* ?big_pics */
-    --big_pics_title_padding: translateX(-45%);
+    /* --big_pics_title_padding: translateX(30%); */
 
     /* ?pro */
     --pro0_padding: 160px;
@@ -593,7 +593,7 @@ FIN DE MAPA DE CONTENIDOS */
     /* ?HEADER */
 
     /* ?big_pics */
-    --big_pics_title_padding: translateX(-50%);
+    --big_pics_title_padding: translateX(20%);
 
     /* ?pro */
     --pro0_padding: 270px;
@@ -1285,7 +1285,7 @@ body.home{
 .blurb{
   text-align: var(--blurb_text_align);
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 1.5rem;
   max-width: 280px;
   margin: auto;
 }

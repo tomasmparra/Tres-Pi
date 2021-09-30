@@ -163,7 +163,7 @@
       </figcaption>
     </figure>
   <?php $i++;} ?>
-  <a class="big_pics_link" href="#">Ver todos los proyectos</a>
+  <a class="big_pics_link" href="<?= site_url() ?>/proyectos">Ver todos los proyectos</a>
 </section>
 
 <?php get_footer(); ?>
