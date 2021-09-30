@@ -95,30 +95,38 @@
   <img class="faq_img" src="<?= get_template_directory_uri() . '/assets/faq.svg' ?>" alt="">
 
   <div class="faq_questions">
-    <div class="faq_group" onclick="altClassFromSelector('faq_answer_display', '#faq_1 ~ .faq_answer', ['faq_answer'])">
-      <p class="faq_question" id="faq_1">Consulta habitual de los clientes</p>
-      <img class="faq_arrow" src="<?= get_template_directory_uri() . '/assets/circle_arrow_small.svg' ?>" alt="">
+    <div class="faq_group" id="faq_1" onclick="altClassFromSelector('faq_answer_display', '#faq_1', ['faq_group'])">
+      <p class="faq_question">Consulta habitual de los clientes</p>
+      <div class="faq_arrow">
+        <?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?>
+      </div>
       <p class="faq_answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <div class="faq_deco"></div>
     </div>
 
-    <div class="faq_group" onclick="altClassFromSelector('faq_answer_display', '#faq_2 ~ .faq_answer', ['faq_answer'])">
-      <p class="faq_question" id="faq_2">Consulta habitual de los clientes</p>
-      <img class="faq_arrow" src="<?= get_template_directory_uri() . '/assets/circle_arrow_small.svg' ?>" alt="">
+    <div class="faq_group" id="faq_2" onclick="altClassFromSelector('faq_answer_display', '#faq_2', ['faq_group'])">
+      <p class="faq_question">Consulta habitual de los clientes</p>
+      <div class="faq_arrow">
+        <?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?>
+      </div>
       <p class="faq_answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <div class="faq_deco"></div>
     </div>
 
-    <div class="faq_group" onclick="altClassFromSelector('faq_answer_display', '#faq_3 ~ .faq_answer', ['faq_answer'])">
-      <p class="faq_question" id="faq_3">Consulta habitual de los clientes</p>
-      <img class="faq_arrow" src="<?= get_template_directory_uri() . '/assets/circle_arrow_small.svg' ?>" alt="">
+    <div class="faq_group" id="faq_3" onclick="altClassFromSelector('faq_answer_display', '#faq_3', ['faq_group'])">
+      <p class="faq_question">Consulta habitual de los clientes</p>
+      <div class="faq_arrow">
+        <?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?>
+      </div>
       <p class="faq_answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <div class="faq_deco"></div>
     </div>
 
-    <div class="faq_group" onclick="altClassFromSelector('faq_answer_display', '#faq_4 ~ .faq_answer', ['faq_answer'])">
-      <p class="faq_question" id="faq_4">Consulta habitual de los clientes</p>
-      <img class="faq_arrow" src="<?= get_template_directory_uri() . '/assets/circle_arrow_small.svg' ?>" alt="">
+    <div class="faq_group" id="faq_4" onclick="altClassFromSelector('faq_answer_display', '#faq_4', ['faq_group'])">
+      <p class="faq_question">Consulta habitual de los clientes</p>
+      <div class="faq_arrow">
+        <?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?>
+      </div>
       <p class="faq_answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <div class="faq_deco"></div>
     </div>
