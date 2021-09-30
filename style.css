@@ -123,8 +123,10 @@ FIN DE MAPA DE CONTENIDOS */
   --onlyMobileF:flex;
   --onlyMobileG:grid;
   --onlyMobileB:block;
-  --auto_to_0:auto;
-  --full_to_80_percent:100%;
+
+  --auto_to_0: auto;
+  --full_to_80_percent: 100%;
+  --absolute_to_static: static;
 
   /* ?HEADER */
   --top_padding: 2.7rem;
@@ -306,6 +308,7 @@ FIN DE MAPA DE CONTENIDOS */
   --blah_full_to_1_padding: 0 var(--lateral);
   --blah_full_to_2_padding: 0 var(--lateral);
   --blah_right_img_order: 0;
+  --blah_icon_deco_transform: translateY(0);
 
   /* ?FOOTER */
 }
@@ -383,8 +386,10 @@ FIN DE MAPA DE CONTENIDOS */
     --onlyDesktopF:flex;
     --onlyMobileF:none;
     --onlyMobileG:none;
+
     --auto_to_0:0;
     --full_to_80_percent:80%;
+    --absolute_to_static: absolute;
 
     --lateral:3rem;
     --lateral_alt: 3rem;
@@ -575,6 +580,7 @@ FIN DE MAPA DE CONTENIDOS */
     --blah_full_to_1_padding: 0 0 0 var(--lateral);
     --blah_full_to_2_padding: 0 calc(var(--lateral) - 30px) 0 0;
     --blah_right_img_order: 2;
+    --blah_icon_deco_transform: translateY(calc(100% + 0.5rem));
 
     /* ?FOOTER */
   }
@@ -1546,6 +1552,7 @@ body.home{
   margin-top:auto;
   display:grid;
   grid-gap: .7rem;
+  position: relative;
 }
 .blah_type{
   font-size: 14px;
@@ -1563,6 +1570,19 @@ body.home{
 .blah_text{
   font-size: 16px;
   line-height: 1.63;
+}
+.blah_arrow_title {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr min-content;
+  column-gap: 0.5rem;
+}
+
+.blah_icon_deco {
+  position: var(--absolute_to_static);
+  bottom: 0;
+  transform: var(--blah_icon_deco_transform);
+  width: calc(25 / var(--sizeRa) * 1rem);
 }
 
 /* ---------------------------------------------------------------------------
