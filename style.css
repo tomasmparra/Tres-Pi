@@ -119,8 +119,10 @@ FIN DE MAPA DE CONTENIDOS */
   --------------------------------------------------------------------------- */
   --onlyDesktopF:none;
   --onlyDesktopG:none;
+  --onlyDesktopB:none;
   --onlyMobileF:flex;
   --onlyMobileG:grid;
+  --onlyMobileB:block;
   --auto_to_0:auto;
 
   /* ?HEADER */
@@ -342,6 +344,8 @@ FIN DE MAPA DE CONTENIDOS */
   :root {
     --sizeR: calc(calc(var(--sizeRc) * 1px) + (var(--sizeRd) - var(--sizeRc)) * ((100vw - 768px) / (1200 - 768)));
 
+    --onlyDesktopB:block;
+    --onlyMobileB:none;
 
     --lateral:3rem;
     --lateral_alt: 3rem;
@@ -1773,7 +1777,7 @@ body.home{
 
 .prek_number{
   font: bold 65px Century Gothic, Arial;
-  height: 100px;
+  height: calc(24 / 100 * var(--sizeRc) * 1rem);
   grid-column:1;
   grid-row:1;
   /* width: 100%; */
@@ -1786,7 +1790,7 @@ body.home{
   stroke-linejoin : round;
 }
 .perk_title{
-  font-size: 40px;
+  font-size: calc(40 / var(--sizeRd) * 1rem);
   font-weight:800;
   grid-column:1;
   grid-row:2;
@@ -1805,6 +1809,11 @@ body.home{
   background: var(--funky_green);
   grid-column:1/-1;
   /* margin-top:3rem; */
+  display: var(--onlyDesktopB);
+}
+.perk_deco_title{
+  display: var(--onlyMobileB);
+  margin: 1.5rem 0;
 }
 
 
@@ -2341,4 +2350,7 @@ body.home{
 .legal_link{
   color:#A0A0A0;
   font-size: 16px;
+}
+.legal_link:hover{
+  color:#d4d4d4;
 }
