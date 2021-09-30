@@ -309,6 +309,7 @@ FIN DE MAPA DE CONTENIDOS */
   --blah_full_to_2_padding: 0 var(--lateral);
   --blah_right_img_order: 0;
   --blah_icon_deco_transform: translateY(0);
+  --blah_arrow_title_gap: 0.5rem;
 
   /* ?FOOTER */
 }
@@ -581,6 +582,7 @@ FIN DE MAPA DE CONTENIDOS */
     --blah_full_to_2_padding: 0 calc(var(--lateral) - 30px) 0 0;
     --blah_right_img_order: 2;
     --blah_icon_deco_transform: translateY(calc(100% + 0.5rem));
+    --blah_arrow_title_gap: 0;
 
     /* ?FOOTER */
   }
@@ -1575,7 +1577,7 @@ body.home{
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr min-content;
-  column-gap: 0.5rem;
+  column-gap: var(--blah_arrow_title_gap);
 }
 
 .blah_icon_deco {
