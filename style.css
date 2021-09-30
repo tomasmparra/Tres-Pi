@@ -311,6 +311,9 @@ FIN DE MAPA DE CONTENIDOS */
   --blah_icon_deco_transform: translateY(0);
   --blah_arrow_title_gap: 0.5rem;
 
+  /* ?simplex */
+  --simplex_padding: var(--lateral);
+
   /* ?FOOTER */
 }
 /* ---------------------------------------------------------------------------
@@ -583,6 +586,9 @@ FIN DE MAPA DE CONTENIDOS */
     --blah_right_img_order: 2;
     --blah_icon_deco_transform: translateY(calc(100% + 0.5rem));
     --blah_arrow_title_gap: 0;
+
+    /* ?simplex */
+    --simplex_padding: 1.9rem calc(var(--lateral) + 380px) .5rem calc(var(--lateral) + 2.8rem);
 
     /* ?FOOTER */
   }
@@ -2054,7 +2060,7 @@ body.home{
   font-weight: 200;
   letter-spacing: 0.64px;
   /* height:0; */
-  /* transform:translateY(-100%); */
+  transform:translateY(60%);
   grid-row:2;
   grid-column: 2;
 }
@@ -2081,7 +2087,7 @@ body.home{
   display:grid;
   position: relative;
   grid-gap:1rem;
-  padding: 1.9rem calc(var(--lateral) + 380px) .5rem calc(var(--lateral) + 2.8rem);
+  padding: var(--simplex_padding);
 }
 .simplex_title{
   font-weight: 800;
@@ -2327,7 +2333,7 @@ body.home{
 /* Style of checkmark/indicator */
 .check_box .checkmark:after {
   left: 7px;
-  top: 3px;
+  top: 2px;
   width: 5px;
   height: 10px;
   border: solid white;
