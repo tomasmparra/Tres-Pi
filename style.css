@@ -1757,9 +1757,11 @@ body.home{
   overflow: hidden;
   margin-bottom:.7rem;
   height:0;
+  transition: 0.5s;
 }
 .faq_answer_display{
-  height: auto;
+  margin-top: 0.5rem;
+  height: 150px;
 }
 
 

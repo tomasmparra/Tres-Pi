@@ -47,7 +47,7 @@
       <p class="dropdowny_item_text">¿Tienes preguntas? ¿Necesitas soporte o asesoramiento? ¿¡Tienes una sugerencia?! Contarás con un asesor para disipar tus dudas y solucionar cualquier problema en todo momento.</p>
     </div>
     <div class="dropdowny_CTA">
-      <a class="dropdowny_CTA_text">Descubre nuestros servicios</a>
+      <a class="dropdowny_CTA_text" href="<?= site_url() ?>/servicios">Descubre nuestros servicios</a>
       <img class="dropdowny_CTA_icon" src="<?php echo get_template_directory_uri() . '/assets/dropdowny_arrow.png' ?>" alt="Icono de flecha">
     </div>
   </div>
