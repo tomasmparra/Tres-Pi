@@ -531,7 +531,7 @@ FIN DE MAPA DE CONTENIDOS */
     --shog_circle_arrow_right:70px;
 
     /* ?faq */
-    --faq_GTC:1fr 1.5rem;
+    --faq_GTC:1fr 1.5fr;
     --faq_title_FS:40px;
     --faq_subtitle_FS:20px;
     --faq_question_FS:20px;
@@ -1692,6 +1692,7 @@ body.home{
   display:grid;
   grid-template-columns: 1fr min-content;
   /* grid-gap:inherit; */
+  cursor: pointer;
 }
 
 .faq_question{
@@ -1710,6 +1711,9 @@ body.home{
   overflow: hidden;
   margin-bottom:.7rem;
   height:0;
+}
+.faq_answer_display{
+  height: auto;
 }
 
 
