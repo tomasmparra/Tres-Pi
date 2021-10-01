@@ -44,11 +44,11 @@
 </section>
 
 
-<section class="equipo onlyDesktopG">
+<section class="equipo">
   <p class="equipo_title">Un equipo multidisciplinar y lorem ipsum dolor</p>
   <p class="html_deco">&lt;h2&gt;</p>
 
-  <div class="member">
+  <div class="member member_display">
     <img class="member_img" src="<?= get_template_directory_uri() . '/assets/tomm.svg' ?>" alt="">
     <p class="member_name">Tomás Moral Parra</p>
     <p class="member_cargo">CEO</p>

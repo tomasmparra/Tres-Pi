@@ -314,6 +314,14 @@ FIN DE MAPA DE CONTENIDOS */
   /* ?simplex */
   --simplex_padding: var(--lateral);
 
+  /* ?equipo */
+  --equipo_columns: 1fr;
+  --equipo_title_font_size: 1.2rem;
+  --member_img_padding: 0;
+  --member_img_width: 65%;
+  --member_justify: center;
+  --member_text_margin: 0 auto 0 20%;
+
   /* ?FOOTER */
 }
 /* ---------------------------------------------------------------------------
@@ -589,6 +597,14 @@ FIN DE MAPA DE CONTENIDOS */
 
     /* ?simplex */
     --simplex_padding: 1.9rem calc(var(--lateral) + 380px) .5rem calc(var(--lateral) + 2.8rem);
+
+  /* ?equipo */
+  --equipo_columns: 1fr 1fr 1fr;
+  --equipo_title_font_size: 1.7rem;
+  --member_img_padding: 1rem;
+  --member_img_width: 100%;
+  --member_justify: start;
+  --member_text_margin: 0;
 
     /* ?FOOTER */
   }
@@ -1846,7 +1862,7 @@ body.home{
   stroke-linejoin : round;
 }
 .perk_title{
-  font-size: calc(40 / var(--sizeRd) * 1rem);
+  font-size: 2rem;
   font-weight:800;
   grid-column:1;
   grid-row:2;
@@ -1884,10 +1900,10 @@ body.home{
 .equipo{
   display:grid;
   background: white;
-  padding:2rem var(--lateral);
-  grid-template-columns:1fr 1fr 1fr;
+  padding:3rem var(--lateral);
+  grid-template-columns: var(--equipo_columns);
   position: relative;
-  grid-gap:3rem;
+  row-gap: 3rem;
   grid-column-gap:4rem;
 }
 .equipo .html_deco{
@@ -1896,33 +1912,47 @@ body.home{
   position:absolute;
   left:60%;
   top:100px;
+  display: var(--hero_html_deco_display);
 }
 .equipo_title{
-  font-size: 40px;
+  font-size: var(--equipo_title_font_size);
   text-align: center;
-  font-weight: 800;
-  width:600px;
+  font-weight: 700;
+  max-width: 520px;
   margin:auto;
   z-index: 1;
   position: relative;
   grid-column:1/-1;
 }
 
-.member_img{
-  padding:1rem;
-  margin-bottom:1.5rem;
+.member {
+  display: none;
+  justify-items: var(--member_justify);
+  grid-auto-rows: min-content;
 }
-.member_name{
-  font-size: 20px;
+.member_display {
+  display: grid;
+}
+
+.member_img {
+  width: var(--member_img_width);
+  padding: var(--member_img_padding);
+  margin-bottom:1rem;
+}
+.member_name {
+  font-size: 1rem;
   font-weight: 800;
+  margin: var(--member_text_margin);
 }
-.member_cargo{
+.member_cargo {
   font-size:20px;
   margin-bottom:1.5rem;
+  margin: var(--member_text_margin);
 }
 .member_desc{
   font-size:16px;
   line-height: 1.63;
+  margin-top: 0.5rem;
 }
 
 
