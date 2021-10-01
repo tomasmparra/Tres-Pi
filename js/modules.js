@@ -272,13 +272,13 @@ class Carousel {
 
         if(n>this.elements.length){this.j=1}
         if(n<1){this.j=this.elements.length}
-        for(i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
+        for(let i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
         this.elements[this.j-1].classList.remove("inactive");
 
     }
     carousel(){this.j++;
         if (this.elements) {
-            for(i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
+            for(let i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
             if(this.j>this.elements.length){this.j=1}
             this.elements[this.j-1].classList.remove("inactive");
             setTimeout(this.carousel, 8000); // Change image every N/1000 seconds
@@ -288,6 +288,7 @@ class Carousel {
 
     plusDivs(n){this.showDivs(this.j+=n)}
 }
+carouselController.setup();
 
 
 

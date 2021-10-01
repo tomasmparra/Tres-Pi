@@ -1899,11 +1899,11 @@ body.home{
 --------------------------------------------------------------------------- */
 .equipo{
   display:grid;
+  grid-template-columns: var(--equipo_columns);
   background: white;
   padding:3rem var(--lateral);
-  grid-template-columns: var(--equipo_columns);
   position: relative;
-  row-gap: 3rem;
+  row-gap: 2rem;
   grid-column-gap:4rem;
 }
 .equipo .html_deco{
@@ -1919,20 +1919,29 @@ body.home{
   text-align: center;
   font-weight: 700;
   max-width: 520px;
-  margin:auto;
+  margin: 0 auto 1.6rem auto;
   z-index: 1;
   position: relative;
   grid-column:1/-1;
 }
+.equipo_arrows {
+  display: var(--onlyMobileF);
+  justify-content: space-between;
+  align-items: center;
+}
+.equipo_arrow_img { width: 1.7rem }
+.equipo_arrow_img_left{ transform: rotate(180deg) }
+.equipo_arrows_text {
+  color: #ffb307;
+  font-size: 1.2rem;
+}
 
 .member {
-  display: none;
+  display: grid;
   justify-items: var(--member_justify);
   grid-auto-rows: min-content;
 }
-.member_display {
-  display: grid;
-}
+.member.inactive { display: var(--onlyDesktopG); }
 
 .member_img {
   width: var(--member_img_width);
