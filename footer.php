@@ -27,15 +27,15 @@
 
     <nav class="naver">
       <svg viewBox="0 0 450 50">
-        <a href="https://google.com"><text y="50">Servicios</text></a>
+        <a href="<?= site_url() ?>/servicios"><text y="50">Servicios</text></a>
       </svg>
 
       <svg viewBox="0 0 450 50">
-        <a href="https://google.com"><text y="50">Proyectos</text></a>
+        <a href="<?= site_url() ?>/proyectos"><text y="50">Proyectos</text></a>
       </svg>
 
       <svg viewBox="0 0 450 50">
-        <a href="https://google.com"><text y="50">Nos define</text></a>
+        <a href="<?= site_url() ?>/nos-define"><text y="50">Nos define</text></a>
       </svg>
     </nav>
 
