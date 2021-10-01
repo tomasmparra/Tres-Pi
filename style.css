@@ -318,9 +318,9 @@ FIN DE MAPA DE CONTENIDOS */
   --equipo_columns: 1fr;
   --equipo_title_font_size: 1.2rem;
   --member_img_padding: 0;
-  --member_img_width: 65%;
   --member_justify: center;
-  --member_text_margin: 0 auto 0 20%;
+  --member_img_width: 65;
+  --member_text_margin: 0 auto 0 calc((100 - var(--member_img_width)) / 2 * 1%);
 
   /* ?FOOTER */
 }
@@ -602,7 +602,7 @@ FIN DE MAPA DE CONTENIDOS */
   --equipo_columns: 1fr 1fr 1fr;
   --equipo_title_font_size: 1.7rem;
   --member_img_padding: 1rem;
-  --member_img_width: 100%;
+  --member_img_width: 100;
   --member_justify: start;
   --member_text_margin: 0;
 
@@ -1899,12 +1899,24 @@ body.home{
 --------------------------------------------------------------------------- */
 .equipo{
   display:grid;
-  grid-template-columns: var(--equipo_columns);
   background: white;
   padding:3rem var(--lateral);
   position: relative;
   row-gap: 2rem;
-  grid-column-gap:4rem;
+}
+.equipo_slider {
+  display:grid;
+  grid-template-columns: var(--equipo_columns);
+  column-gap: 4rem;
+  row-gap: 1rem;
+}
+.equipo_slider * {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .equipo .html_deco{
   color:#F0F0F0;
@@ -1944,7 +1956,7 @@ body.home{
 .member.inactive { display: var(--onlyDesktopG); }
 
 .member_img {
-  width: var(--member_img_width);
+  width: calc(var(--member_img_width) * 1%);
   padding: var(--member_img_padding);
   margin-bottom:1rem;
 }
