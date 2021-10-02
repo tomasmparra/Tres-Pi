@@ -1,5 +1,5 @@
 
-  <footer class="footer onlyDesktopG" id="footer">
+  <footer class="footer" id="footer">
     <img class="footer_bg" src="<?php echo get_template_directory_uri() . '/assets/footer_bgx2.jpg' ?>" alt="">
     <div class="footer_title_box">
       <h4 class="footer_title">¿Tienes un proyecto en mente?</h4>
@@ -11,11 +11,14 @@
       </div>
     </div>
     <form class="contact" action="index.html" method="post">
-      <p class="contact_title">Escríbenos</p>
+      <div>
+        <p class="contact_title_mobile">Formulario de contacto</p>
+        <p class="contact_title">¡Escríbenos!</p>
+      </div>
       <input class="contact_input" type="email" name="" value="" placeholder="Tu email de contacto…">
-      <input class="contact_input textarea" type="textarea" name="name"  placeholder="Tu mensaje…"></input>
+      <textarea class="contact_input textarea" name="name"  placeholder="Tu mensaje…"></textarea>
       <div class="contact_acceptance">
-        <label class="check_box">Acepto los términos y condiciones lorem ipsum dolor <br>sit amet et sicue era alectra esta est locua siem.
+        <label class="check_box">Acepto los términos y condiciones lorem ipsum dolor sit amet et sicue era alectra esta est locua siem.
           <input class="checkbox" type="checkbox">
           <span class="checkmark"></span>
         </label>
@@ -25,7 +28,7 @@
       </div>
     </form>
 
-    <nav class="naver">
+    <nav class="naver onlyDesktopG">
       <svg viewBox="0 0 450 50">
         <a href="<?= site_url() ?>/servicios"><text y="50">Servicios</text></a>
       </svg>
@@ -39,9 +42,17 @@
       </svg>
     </nav>
 
+    <nav class="naver_mobile">
+      <p class="naver_mobile_title">Secciones</p>
+      <a href="<?= site_url() ?>">Home</a>
+      <a href="<?= site_url() ?>/proyectos">Proyectos</a>
+      <a href="<?= site_url() ?>/servicios">Servicios</a>
+      <a href="<?= site_url() ?>/nos-define">Nos define</a>
+    </nav>
+
     <ul class="legal">
-      <li class="legal_li"><a class="legal_link" href="#">© Trespi 2021</a></li>
-      <div class="legal_deco"></div>
+      <li class="legal_li legal_li_full"><a class="legal_link" href="#">© Trespi 2021</a></li>
+      <!-- <div class="legal_deco"></div> -->
       <li class="legal_li"><a class="legal_link" href="#">Política de privacidad</a></li>
       <div class="legal_deco"></div>
       <li class="legal_li"><a class="legal_link" href="#">Aviso Legal</a></li>
