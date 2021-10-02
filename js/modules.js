@@ -246,7 +246,7 @@ carouselController = {
 		if (d.querySelectorAll('.Carousel')) {
 			var carousels = d.querySelectorAll('.Carousel');
 			carousels.forEach( carousel => {
-				carouselController.carousels.unshift(new Carousel(carousel))
+				carouselController.carousels.unshift(new Carousel(carousel));
 			});
 		}
 	}
@@ -258,6 +258,9 @@ class Carousel {
 		this.j = 1;
 		this.elements = gallery.querySelectorAll('.Element');
 		this.title = gallery.id;
+		this.isDown = false;
+		this.mouseX = 0;
+		this.mouseDeltaChange = 100;
 
 		if(this.elements.length>1){
             gallery.querySelector('.nextButton').onclick = () =>{this.plusDivs(+1)}
@@ -266,19 +269,20 @@ class Carousel {
             setTimeout(this.carousel, 8000);
         }
 
+		this.slideEvents(gallery);
 	}
 
     showDivs(n){
 
         if(n>this.elements.length){this.j=1}
         if(n<1){this.j=this.elements.length}
-        for(i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
+        for(let i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
         this.elements[this.j-1].classList.remove("inactive");
 
     }
     carousel(){this.j++;
         if (this.elements) {
-            for(i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
+            for(let i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
             if(this.j>this.elements.length){this.j=1}
             this.elements[this.j-1].classList.remove("inactive");
             setTimeout(this.carousel, 8000); // Change image every N/1000 seconds
@@ -287,7 +291,43 @@ class Carousel {
     }
 
     plusDivs(n){this.showDivs(this.j+=n)}
+
+	slideEvents(gallery) {
+		['mousedown', 'touchstart'].forEach((e) => {
+			gallery.addEventListener(e, (event) => {
+				let touchMouseX = event.touches ? event.touches[0].clientX : event.clientX;
+
+				this.isDown = true;
+				this.mouseX = touchMouseX;
+			}, true);
+		});
+
+		['mouseup', 'touchend'].forEach((e) => {
+			gallery.addEventListener(e, () => {
+				this.isDown = false;
+			}, true);
+		});
+
+		['mousemove', 'touchmove'].forEach((e) => {
+			gallery.addEventListener(e, (event) => {
+				let touchMouseX = event.touches ? event.touches[0].clientX : event.clientX;
+				
+				// Cambio solo si supera al desplazamiento horizontal requerido
+				if(this.isDown && Math.abs(touchMouseX - this.mouseX) >= this.mouseDeltaChange) {
+					if(this.mouseX < touchMouseX) {
+						this.plusDivs(-1);
+					}
+
+					else if(this.mouseX > touchMouseX) {
+						this.plusDivs(+1);
+					}
+					this.isDown = false;
+				}
+			}, true);
+		});
+	}
 }
+carouselController.setup();
 
 
 

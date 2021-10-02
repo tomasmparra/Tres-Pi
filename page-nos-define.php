@@ -44,73 +44,133 @@
 </section>
 
 
-<section class="equipo onlyDesktopG">
+<section class="equipo">
   <p class="equipo_title">Un equipo multidisciplinar y lorem ipsum dolor</p>
   <p class="html_deco">&lt;h2&gt;</p>
 
-  <div class="member">
-    <img class="member_img" src="<?= get_template_directory_uri() . '/assets/tomm.svg' ?>" alt="">
-    <p class="member_name">Tomás Moral Parra</p>
-    <p class="member_cargo">CEO</p>
-    <p class="member_desc">Me gusta hacer lasaña y siempre me sobra, ¿quieres compartirla conmigo? Una frase simpática con la que además destacas tus habilidades en Tinder.</p>
-  </div>
+  <div class="equipo_slider Carousel">
+    <div class="member Element">
+      <img class="member_img" src="<?= get_template_directory_uri() . '/assets/tomm.svg' ?>" alt="">
+      <p class="member_name">Tomás Moral Parra</p>
+      <p class="member_cargo">CEO</p>
+      <p class="member_desc">Me gusta hacer lasaña y siempre me sobra, ¿quieres compartirla conmigo? Una frase simpática con la que además destacas tus habilidades en Tinder.</p>
+    </div>
 
-  <div class="member">
-    <img class="member_img" src="<?= get_template_directory_uri() . '/assets/sofi.svg' ?>" alt="">
-    <p class="member_name">Sofia Molinero</p>
-    <p class="member_cargo">Code artist</p>
-    <p class="member_desc">Venimos en pack (junto a una foto de tus mascota). La mejor opción para llamar la atención de los amantes de los animales y ligar como nunca.</p>
-  </div>
+    <div class="member Element">
+      <img class="member_img" src="<?= get_template_directory_uri() . '/assets/sofi.svg' ?>" alt="">
+      <p class="member_name">Sofia Molinero</p>
+      <p class="member_cargo">Code artist</p>
+      <p class="member_desc">Venimos en pack (junto a una foto de tus mascota). La mejor opción para llamar la atención de los amantes de los animales y ligar como nunca.</p>
+    </div>
 
-  <div class="member">
-    <img class="member_img" src="<?= get_template_directory_uri() . '/assets/rama.svg' ?>" alt="">
-    <p class="member_name">Ramiro Gomez Masetti</p>
-    <p class="member_cargo">Power ranger blanco</p>
-    <p class="member_desc">Diremos a tus padres que nos conocimos en un bar. Usa las típicas canciones y triunfarás en las redes sociales. ¿Listo para bailar?</p>
+    <div class="member Element">
+      <img class="member_img" src="<?= get_template_directory_uri() . '/assets/rama.svg' ?>" alt="">
+      <p class="member_name">Ramiro Gomez Masetti</p>
+      <p class="member_cargo">Power ranger blanco</p>
+      <p class="member_desc">Diremos a tus padres que nos conocimos en un bar. Usa las típicas canciones y triunfarás en las redes sociales. ¿Listo para bailar?</p>
+    </div>
+
+    <div class="equipo_arrows">
+      <div class="equipo_arrow_img equipo_arrow_img_left prevButton">
+        <img src="<?= get_template_directory_uri() . '/assets/dropdowny_arrow.png' ?>" alt="">
+      </div>
+      <p class="equipo_arrows_text">Haz slide</p>
+      <div class="equipo_arrow_img nextButton">
+        <img src="<?= get_template_directory_uri() . '/assets/dropdowny_arrow.png' ?>" alt="">
+      </div>
+    </div>
   </div>
 </section>
 
 
-<section class="colabs onlyDesktopG">
+<section class="colabs">
   <p class="colab_title">Colaboradores</p>
 
   <div class="colab">
     <p class="colab_name">Raquel Tresguerres Gutiérrez</p>
-    <p class="colab_cargo">Diseño UI UX</p>
+    <div class="colab_textic">
+      <p class="colab_cargo">Diseño UI UX</p>
+      <div class="colab_icons">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+      </div>
+    </div>
   </div>
 
   <div class="colab">
     <p class="colab_name">Mari Pepi Lopez</p>
-    <p class="colab_cargo">SEO/SEM</p>
+    <div class="colab_textic">
+      <p class="colab_cargo">SEO/SEM</p>
+      <div class="colab_icons">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+      </div>
+    </div>
   </div>
 
   <div class="colab">
     <p class="colab_name">José Antonio Eduardo</p>
-    <p class="colab_cargo">SEO/SEM</p>
+    <div class="colab_textic">
+      <p class="colab_cargo">SEO/SEM</p>
+      <div class="colab_icons">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+      </div>
+    </div>
   </div>
 
   <div class="colab">
     <p class="colab_name">Jonathan Cantor</p>
-    <p class="colab_cargo">Desarrollo Frontend</p>
+    <div class="colab_textic">
+      <p class="colab_cargo">Desarrollo Frontend</p>
+      <div class="colab_icons">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+      </div>
+    </div>
   </div>
-
 
   <div class="colab">
     <p class="colab_name">Raquel Tresguerres Gutiérrez</p>
     <p class="colab_link">tresguerres.studio</p>
-    <p class="colab_cargo">Diseño UI UX</p>
+    <div class="colab_textic">
+      <p class="colab_cargo">Diseño UI UX</p>
+      <div class="colab_icons">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+      </div>
+    </div>
   </div>
 
   <div class="colab">
     <p class="colab_name">José Antonio Eduardo</p>
     <p class="colab_link">josem.com</p>
-    <p class="colab_cargo">SEO/SEM</p>
+    <div class="colab_textic">
+      <p class="colab_cargo">SEO/SEM</p>
+      <div class="colab_icons">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+      </div>
+    </div>
   </div>
 
   <div class="colab">
     <p class="colab_name">José Antonio Eduardo</p>
     <p class="colab_link">jose.yahoo</p>
-    <p class="colab_cargo">SEO/SEM</p>
+    <div class="colab_textic">
+      <p class="colab_cargo">SEO/SEM</p>
+      <div class="colab_icons">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+      </div>
+    </div>
   </div>
 
 
@@ -118,19 +178,40 @@
   <div class="colab">
     <p class="colab_name">Raquel Tresguerres Gutiérrez</p>
     <p class="colab_link">tresguerres.studio</p>
-    <p class="colab_cargo">Diseño UI UX</p>
+    <div class="colab_textic">
+      <p class="colab_cargo">Diseño UI UX</p>
+      <div class="colab_icons">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+      </div>
+    </div>
   </div>
 
   <div class="colab">
     <p class="colab_name">José Antonio Eduardo</p>
     <p class="colab_link">jose.yahoo</p>
-    <p class="colab_cargo">SEO/SEM</p>
+    <div class="colab_textic">
+      <p class="colab_cargo">SEO/SEM</p>
+      <div class="colab_icons">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+      </div>
+    </div>
   </div>
 
   <div class="colab">
     <p class="colab_name">José Antonio Eduardo</p>
     <p class="colab_link">jose.yahoo</p>
-    <p class="colab_cargo">SEO/SEM</p>
+    <div class="colab_textic">
+      <p class="colab_cargo">SEO/SEM</p>
+      <div class="colab_icons">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+      </div>
+    </div>
   </div>
 </section>
 

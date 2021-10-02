@@ -314,6 +314,17 @@ FIN DE MAPA DE CONTENIDOS */
   /* ?simplex */
   --simplex_padding: var(--lateral);
 
+  /* ?equipo */
+  --equipo_columns: 1fr;
+  --equipo_title_font_size: 1.2rem;
+  --member_img_padding: 0;
+  --member_justify: center;
+  --member_img_width: 65;
+  --member_text_margin: 0 auto 0 calc((100 - var(--member_img_width)) / 2 * 1%);
+
+  /* ?colabs */
+  --colabs_columns: 1fr;
+
   /* ?FOOTER */
 }
 /* ---------------------------------------------------------------------------
@@ -373,6 +384,9 @@ FIN DE MAPA DE CONTENIDOS */
 
     /* ?big_pics */
     --big_pics_title_FS: 32px;
+
+    /* ?colabs */
+    --colabs_columns: 1fr 1fr;
 
     /* ?FOOTER */
   }
@@ -590,6 +604,14 @@ FIN DE MAPA DE CONTENIDOS */
     /* ?simplex */
     --simplex_padding: 1.9rem calc(var(--lateral) + 380px) .5rem calc(var(--lateral) + 2.8rem);
 
+    /* ?equipo */
+    --equipo_columns: 1fr 1fr 1fr;
+    --equipo_title_font_size: 1.7rem;
+    --member_img_padding: 1rem;
+    --member_img_width: 100;
+    --member_justify: start;
+    --member_text_margin: 0;
+
     /* ?FOOTER */
   }
 }
@@ -620,6 +642,8 @@ FIN DE MAPA DE CONTENIDOS */
 
     --pro3_altImg_margin: auto;
 
+    /* ?colabs */
+    --colabs_columns: 1fr 1fr 1fr;
 
     /* ?FOOTER */
   }
@@ -1846,7 +1870,7 @@ body.home{
   stroke-linejoin : round;
 }
 .perk_title{
-  font-size: calc(40 / var(--sizeRd) * 1rem);
+  font-size: 2rem;
   font-weight:800;
   grid-column:1;
   grid-row:2;
@@ -1884,11 +1908,26 @@ body.home{
 .equipo{
   display:grid;
   background: white;
-  padding:2rem var(--lateral);
-  grid-template-columns:1fr 1fr 1fr;
+  padding:3rem var(--lateral);
   position: relative;
-  grid-gap:3rem;
-  grid-column-gap:4rem;
+  row-gap: 2rem;
+}
+.equipo_slider {
+  display:grid;
+  grid-template-columns: var(--equipo_columns);
+  column-gap: 4rem;
+  row-gap: 1rem;
+}
+.equipo_slider * {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.equipo_slider img {
+  pointer-events: none;
 }
 .equipo .html_deco{
   color:#F0F0F0;
@@ -1896,33 +1935,56 @@ body.home{
   position:absolute;
   left:60%;
   top:100px;
+  display: var(--hero_html_deco_display);
 }
 .equipo_title{
-  font-size: 40px;
+  font-size: var(--equipo_title_font_size);
   text-align: center;
-  font-weight: 800;
-  width:600px;
-  margin:auto;
+  font-weight: 700;
+  max-width: 520px;
+  margin: 0 auto 1.6rem auto;
   z-index: 1;
   position: relative;
   grid-column:1/-1;
 }
+.equipo_arrows {
+  display: var(--onlyMobileF);
+  justify-content: space-between;
+  align-items: center;
+}
+.equipo_arrow_img { width: 1.7rem; cursor: pointer;}
+.equipo_arrow_img_left{ transform: rotate(180deg) }
+.equipo_arrows_text {
+  color: #ffb307;
+  font-size: 1.2rem;
+}
 
-.member_img{
-  padding:1rem;
-  margin-bottom:1.5rem;
+.member {
+  display: grid;
+  justify-items: var(--member_justify);
+  grid-auto-rows: min-content;
 }
-.member_name{
-  font-size: 20px;
+.member.inactive { display: var(--onlyDesktopG); }
+
+.member_img {
+  width: calc(var(--member_img_width) * 1%);
+  padding: var(--member_img_padding);
+  margin-bottom:1rem;
+}
+.member_name {
+  font-size: 1rem;
   font-weight: 800;
+  margin: var(--member_text_margin);
 }
-.member_cargo{
+.member_cargo {
   font-size:20px;
   margin-bottom:1.5rem;
+  margin: var(--member_text_margin);
 }
 .member_desc{
   font-size:16px;
   line-height: 1.63;
+  margin-top: 0.5rem;
 }
 
 
@@ -1934,13 +1996,13 @@ body.home{
                           6.23) =colab:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.colabs{
+.colabs {
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  padding:3rem var(--lateral);
+  grid-template-columns: var(--colabs_columns);
+  padding: 3rem var(--lateral);
   background:#F6F6F6;
   /* grid-auto-flow: column; */
-  grid-gap:1rem;
+  gap:2rem;
 }
 .colab_title{
   grid-column: 1/-1;
@@ -1953,9 +2015,24 @@ body.home{
   grid-gap:.5rem;
   margin-bottom:auto;
 }
-.colab_name, .colab_link, .colab_cargo{font-size:18px}
+.colab_name, .colab_link, .colab_cargo{font-size:1.13rem; line-height: 1.13rem;}
 .colab_name{
   font-weight: 800;
+}
+.colab_icons {
+  display: grid;
+  grid-auto-flow: column;
+  margin-left: auto;
+  column-gap: 0.5rem;
+}
+.colab_ico {
+  height: 1.13rem;
+  width: auto;
+}
+.colab_textic {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
 }
 
 
