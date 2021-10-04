@@ -2095,6 +2095,10 @@ body.home{
 .colab_ico {
   height: 1.13rem;
   width: auto;
+  cursor: pointer;
+}
+.colab_ico:hover svg g {
+  fill: #0bbba9;
 }
 .colab_textic {
   display: grid;
