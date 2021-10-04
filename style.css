@@ -1822,7 +1822,7 @@ body.home{
 }
 .faq_img{
   /* grid-column:1; */
-  width:250px;
+  max-width:250px;
   height:auto;
   margin:auto;
   /* grid-row: 4/-1; */
@@ -2072,7 +2072,7 @@ body.home{
 }
 .colab_title{
   grid-column: 1/-1;
-  font-size:40px;
+  font-size: 2.1rem;
   font-weight: 600;
   color:var(--funky_green);
 }
