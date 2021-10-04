@@ -137,6 +137,7 @@ FIN DE MAPA DE CONTENIDOS */
 
   /* ?HEADER */
   --top_padding: 2.7rem;
+  --header_z_index: 3;
 
   /* ?nav_bar */
   --nav_bar_display:none;
@@ -439,11 +440,11 @@ FIN DE MAPA DE CONTENIDOS */
     --lateral_alt: 3rem;
 
 
-    --top_padding: 2.7rem;
     --sizeR: calc(var(--sizeRd) * 1px);
-
-
+    
     /* ?HEADER */
+    --top_padding: 2.7rem;
+    --header_z_index: auto;
 
     /* ?nav_bar */
     --nav_bar_display:grid;
@@ -843,7 +844,7 @@ body.home{
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 .header {
-  z-index: 5;
+  z-index: var(--header_z_index);
 }
 
 .nav_bar {
@@ -862,7 +863,7 @@ body.home{
   background-color: var(--grey_to_transparent);
   grid-auto-columns: var(--full_to_max_content);
   grid-auto-rows: min-content;
-  z-index: -1;
+  z-index: calc((1 - var(--zero_to_1)) * -1);
 }
 .header.menu_open .nav_bar {
   bottom: var(--zero_to_auto);
