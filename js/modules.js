@@ -295,6 +295,7 @@ class Carousel {
 	slideEvents(gallery) {
 		['mousedown', 'touchstart'].forEach((e) => {
 			gallery.addEventListener(e, (event) => {
+				if(window.innerWidth >= 992) return;
 				let touchMouseX = event.touches ? event.touches[0].clientX : event.clientX;
 
 				this.isDown = true;
