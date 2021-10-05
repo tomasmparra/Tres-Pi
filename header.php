@@ -47,7 +47,11 @@ $scrt = '6LcRuNAUAAAAALBu7Ymh0yxmTXTJmP0rsnkjGyj0';
 
     <div class="sticky_CTA_pos">  
       <p class="sticky_CTA" href="#">Comienza tu proyecto</p>
-      <button class="menu_button" onclick="altClassFromSelector('menu_open', '.header', ['header'])">Menu</button>
+      <button class="burger" onclick="altClassFromSelector('menu_open', '.header', ['header'])">
+        <div class="burger_bar"></div>
+        <div class="burger_bar"></div>
+        <div class="burger_bar"></div>
+      </button>
     </div>
 
   </header>
