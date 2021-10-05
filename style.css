@@ -90,6 +90,8 @@ FIN DE MAPA DE CONTENIDOS */
   /* ?lateral */
   --lateral:36px;
   --lateral_alt: 2rem;
+  --lateral_medium: var(--lateral);
+  --lateral_big: var(--lateral);
   --scrollbar_width:12px;
 
   /* COLORS */
@@ -337,8 +339,8 @@ FIN DE MAPA DE CONTENIDOS */
   --colabs_columns: 1fr;
 
   /* ?contact */
-  --contact_margin_left: auto;
-  --contact_magin_right: auto;
+  --contact_margin_left: 0;
+  --contact_magin_right: 0;
   --contact_padding: var(--lateral);
   --contact_max_width: auto;
 
@@ -440,6 +442,8 @@ FIN DE MAPA DE CONTENIDOS */
 
     --lateral:3rem;
     --lateral_alt: 3rem;
+    --lateral_medium: 2rem calc(var(--lateral) + 3rem);
+    --lateral_big: 4.5rem calc(var(--lateral) + 3rem);
 
 
     --sizeR: calc(var(--sizeRd) * 1px);
@@ -2251,6 +2255,7 @@ body.home{
 .simplex_image{
   padding: 1rem var(--lateral);
   height:auto;
+  max-height: 65vh;
 }
 
 
@@ -2263,7 +2268,11 @@ body.home{
   display:grid;
   grid-template-columns:1fr 1fr;
   grid-gap:2.5rem;
-  padding: 2rem calc(var(--lateral) + 3rem);
+  padding: var(--lateral_medium);
+}
+.ruli_column {
+  grid-template-columns: 1fr;
+  padding: var(--lateral_big);
 }
 .ruli_title{
   font-size:24px;
@@ -2288,13 +2297,14 @@ body.home{
 .colorin{
   display:grid;
   background: #F6F6F6;
-  padding: 4.5rem 0;
+  padding: var(--lateral_big);
   /* padding: 4rem calc(var(--lateral) + 200px); */
   place-items:center;
   grid-gap:1.5rem;
 }
 .colorin_quote{
   max-width:650px;
+  width: 100%;
   font-size:18px;
   line-height: 1.44;
 }

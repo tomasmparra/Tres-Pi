@@ -68,10 +68,15 @@ responsive_img($config);
   ?>
 </section>
 
-<section>
+<section class="ruli ruli_column">
+  <p class="ruli_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <img class="ruli_img_big"   src="https://picsum.photos/702/400" alt="">
+</section>
+
+<!-- <section>
   <?php the_content(); ?>
 
-</section>
+</section> -->
 
 
 <?php
