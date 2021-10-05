@@ -91,9 +91,9 @@
     <div class="colab_textic">
       <p class="colab_cargo">Diseño UI UX</p>
       <div class="colab_icons">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
       </div>
     </div>
   </div>
@@ -103,9 +103,9 @@
     <div class="colab_textic">
       <p class="colab_cargo">SEO/SEM</p>
       <div class="colab_icons">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
       </div>
     </div>
   </div>
@@ -115,9 +115,9 @@
     <div class="colab_textic">
       <p class="colab_cargo">SEO/SEM</p>
       <div class="colab_icons">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
       </div>
     </div>
   </div>
@@ -127,9 +127,9 @@
     <div class="colab_textic">
       <p class="colab_cargo">Desarrollo Frontend</p>
       <div class="colab_icons">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
       </div>
     </div>
   </div>
@@ -140,9 +140,9 @@
     <div class="colab_textic">
       <p class="colab_cargo">Diseño UI UX</p>
       <div class="colab_icons">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
       </div>
     </div>
   </div>
@@ -153,9 +153,9 @@
     <div class="colab_textic">
       <p class="colab_cargo">SEO/SEM</p>
       <div class="colab_icons">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
       </div>
     </div>
   </div>
@@ -166,9 +166,9 @@
     <div class="colab_textic">
       <p class="colab_cargo">SEO/SEM</p>
       <div class="colab_icons">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
       </div>
     </div>
   </div>
@@ -181,9 +181,9 @@
     <div class="colab_textic">
       <p class="colab_cargo">Diseño UI UX</p>
       <div class="colab_icons">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
       </div>
     </div>
   </div>
@@ -194,9 +194,9 @@
     <div class="colab_textic">
       <p class="colab_cargo">SEO/SEM</p>
       <div class="colab_icons">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
       </div>
     </div>
   </div>
@@ -207,9 +207,9 @@
     <div class="colab_textic">
       <p class="colab_cargo">SEO/SEM</p>
       <div class="colab_icons">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
-        <img class="colab_ico" src="<?= get_template_directory_uri() ?>/assets/circle_arrow_small.svg">
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
+        <div class="colab_ico"><a href=""><?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow_small.svg') ?></a></div>
       </div>
     </div>
   </div>
