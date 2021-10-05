@@ -65,6 +65,7 @@ Version: 1.0
 6.43) =colorin:
 
 6.50) =thanks:
+6.51) =prarrows:
 
 6.69) =redDot:
 6.99) =footer:
@@ -2286,6 +2287,12 @@ body.home{
 .ruli_img_big{
   grid-column:1/-1;
 }
+.ruli_quote{
+  max-width:650px;
+  width: 100%;
+  font-size:18px;
+  margin-bottom: 2rem;
+}
 
 
 
@@ -2374,6 +2381,29 @@ body.home{
   display: none;
 }
 
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.51) =prarrows:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+.prarrows {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--lateral) 2.5rem var(--lateral);
+}
+.prarrows_arrow {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 1rem;
+  align-items: center;
+  background: none;
+  border: none;
+  text-align: right;
+}
+.prarrows_arrow_left { text-align: left; }
+.prarrows_text { color: #0bbba9; font-weight: 400; }
+.prarrows_img { width: 1.3rem }
+.prarrows_arrow_left .prarrows_img { transform: rotate(180deg) }
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
