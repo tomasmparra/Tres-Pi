@@ -64,6 +64,8 @@ Version: 1.0
 6.42) =ruli:
 6.43) =colorin:
 
+6.50) =thanks:
+
 6.69) =redDot:
 6.99) =footer:
 
@@ -2299,6 +2301,67 @@ body.home{
 .colorin_img{
   max-width:650px;
   object-position: top;
+}
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.50) =thanks:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+.thanks {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg_grey);
+  z-index: 4;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  grid-auto-rows: min-content;
+  padding: 6rem var(--lateral) 2rem var(--lateral);
+}
+.thanks_figure {
+  width: 70%;
+  max-width: 400px;
+  margin-bottom: 3rem;
+}
+.thanks_figure svg {
+  width: 100%;
+  height: auto;
+}
+.thanks_title {
+  font-size: 1.4rem;
+  color: #f9f9f9;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.thanks_box {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.thanks_text {
+  color: #f9f9f9;
+  font-weight: 500;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 0.87rem;
+  margin-bottom: 2.5rem;
+}
+.thanks_text a {
+  margin-bottom: 0.1rem;
+  border-bottom: solid #f9f9f9 0.1rem;
+}
+.thanks_close {
+  color: #0bbba9;
+  display: inline-block;
+  padding: 1rem;
+}
+.thanks ~ .footer {
+  display: none;
 }
 
 
