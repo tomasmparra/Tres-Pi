@@ -68,10 +68,43 @@ responsive_img($config);
   ?>
 </section>
 
-<section>
+<section class="ruli ruli_column">
+  <p class="ruli_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <div>
+    <p class="ruli_quote">- Lorem ipsum dolor.</p>
+    <img class="ruli_img_big"   src="https://picsum.photos/702/400" alt="">
+  </div>
+</section>
+
+<div class="prarrows">
+  <?php
+  $prev_proyect = get_adjacent_post(false, '', true);
+  $next_proyect = get_adjacent_post(false, '', false);
+
+  if($prev_proyect) { ?>
+    <a class="prarrows_arrow prarrows_arrow_left" href="<?= get_permalink($prev_proyect->ID) ?>">
+      <img class="prarrows_img" src="<?= get_template_directory_uri() ?>/assets/dropdowny_arrow.png">
+      <span class="prarrows_text">Anterior proyecto</span>
+    </a>
+  <?php }
+
+  else echo '<a></a>';
+
+  if($next_proyect) { ?>
+    <a class="prarrows_arrow" href="<?= get_permalink($next_proyect->ID) ?>">
+      <span class="prarrows_text">Siguiente proyecto</span>
+      <img class="prarrows_img" src="<?= get_template_directory_uri() ?>/assets/dropdowny_arrow.png">
+    </a>
+  <?php }
+
+  else echo '<a></a>';
+  ?>
+</div>
+
+<!-- <section>
   <?php the_content(); ?>
 
-</section>
+</section> -->
 
 
 <?php

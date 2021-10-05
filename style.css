@@ -65,6 +65,7 @@ Version: 1.0
 6.43) =colorin:
 
 6.50) =thanks:
+6.51) =prarrows:
 
 6.69) =redDot:
 6.99) =footer:
@@ -90,6 +91,8 @@ FIN DE MAPA DE CONTENIDOS */
   /* ?lateral */
   --lateral:36px;
   --lateral_alt: 2rem;
+  --lateral_medium: var(--lateral);
+  --lateral_big: var(--lateral);
   --scrollbar_width:12px;
 
   /* COLORS */
@@ -337,8 +340,8 @@ FIN DE MAPA DE CONTENIDOS */
   --colabs_columns: 1fr;
 
   /* ?contact */
-  --contact_margin_left: auto;
-  --contact_magin_right: auto;
+  --contact_margin_left: 0;
+  --contact_magin_right: 0;
   --contact_padding: var(--lateral);
   --contact_max_width: auto;
 
@@ -440,6 +443,8 @@ FIN DE MAPA DE CONTENIDOS */
 
     --lateral:3rem;
     --lateral_alt: 3rem;
+    --lateral_medium: 2rem calc(var(--lateral) + 3rem);
+    --lateral_big: 4.5rem calc(var(--lateral) + 3rem);
 
 
     --sizeR: calc(var(--sizeRd) * 1px);
@@ -2251,6 +2256,7 @@ body.home{
 .simplex_image{
   padding: 1rem var(--lateral);
   height:auto;
+  max-height: 65vh;
 }
 
 
@@ -2263,7 +2269,11 @@ body.home{
   display:grid;
   grid-template-columns:1fr 1fr;
   grid-gap:2.5rem;
-  padding: 2rem calc(var(--lateral) + 3rem);
+  padding: var(--lateral_medium);
+}
+.ruli_column {
+  grid-template-columns: 1fr;
+  padding: var(--lateral_big);
 }
 .ruli_title{
   font-size:24px;
@@ -2277,6 +2287,12 @@ body.home{
 .ruli_img_big{
   grid-column:1/-1;
 }
+.ruli_quote{
+  max-width:650px;
+  width: 100%;
+  font-size:18px;
+  margin-bottom: 2rem;
+}
 
 
 
@@ -2288,13 +2304,14 @@ body.home{
 .colorin{
   display:grid;
   background: #F6F6F6;
-  padding: 4.5rem 0;
+  padding: var(--lateral_big);
   /* padding: 4rem calc(var(--lateral) + 200px); */
   place-items:center;
   grid-gap:1.5rem;
 }
 .colorin_quote{
   max-width:650px;
+  width: 100%;
   font-size:18px;
   line-height: 1.44;
 }
@@ -2364,6 +2381,29 @@ body.home{
   display: none;
 }
 
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          6.51) =prarrows:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+.prarrows {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--lateral) 2.5rem var(--lateral);
+}
+.prarrows_arrow {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 1rem;
+  align-items: center;
+  background: none;
+  border: none;
+  text-align: right;
+}
+.prarrows_arrow_left { text-align: left; }
+.prarrows_text { color: #0bbba9; font-weight: 400; }
+.prarrows_img { width: 1.3rem }
+.prarrows_arrow_left .prarrows_img { transform: rotate(180deg) }
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
