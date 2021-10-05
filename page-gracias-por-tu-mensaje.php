@@ -1,5 +1,6 @@
-<?php get_header(); ?>
+<?php if(!isset($_GET['status']) || $_GET['status'] == 'error') wp_redirect(site_url('error')); ?>
 
+<?php get_header(); ?>
 
 <main class="thanks">
   <div class="thanks_figure">  

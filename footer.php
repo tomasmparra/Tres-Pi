@@ -10,7 +10,11 @@
         <div class="footer_CTA_deco"></div>
       </div>
     </div>
-    <form class="contact" action="index.html" method="post">
+    <form class="contact" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+      <input type="hidden" name="action" value="tp_form_handler">
+      <input type="hidden" name="link"   value="<?= site_url('gracias-por-tu-mensaje'); ?>">
+      <input type="text"   name="a00"    value="" placeholder="jeje" hidden>
+
       <div>
         <p class="contact_title_mobile">Formulario de contacto</p>
         <p class="contact_title">¡Escríbenos!</p>

@@ -1,9 +1,9 @@
 <?php
 
 
-add_action(        'admin_post_lt_form_handler', 'lt_form_handler');
-add_action( 'admin_post_nopriv_lt_form_handler', 'lt_form_handler');
-function lt_form_handler() {
+add_action(        'admin_post_tp_form_handler', 'tp_form_handler');
+add_action( 'admin_post_nopriv_tp_form_handler', 'tp_form_handler');
+function tp_form_handler() {
 	$debugMode = false;
 	$respuesta = array();
 
