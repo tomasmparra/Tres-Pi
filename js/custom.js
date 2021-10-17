@@ -358,3 +358,25 @@ const fil_pa_sea = (cycle_container, filter, page, keyword)=>{
     if (paginators){ activate_paginators(paginators); }
   });
 }
+
+
+
+
+
+
+
+const updateQuestionText = (event, question_selector, new_text) => {
+  let selected_option = event.target.nextElementSibling;
+  let question_to_update = document.querySelector(question_selector + ' .budget_text');
+  let view_option_selected = document.querySelector(question_selector + ' .budget_option_selected');
+
+  question_to_update.innerHTML = new_text;
+  view_option_selected.innerHTML = selected_option.innerHTML;
+}
+
+
+
+
+
+
+
