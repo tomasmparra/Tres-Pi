@@ -374,9 +374,6 @@ const updateQuestionText = (event, question_selector, new_text) => {
   view_option_selected.innerHTML = selected_option.innerHTML;
 }
 
-
-
-
 const updateQuestionTexts = (question_selector, new_text, budget_page) => {
   let selected_options = [...document.querySelectorAll(budget_page + ' ' + '.budget_radio:checked')];
   let question_to_update = document.querySelector(question_selector + ' .budget_text');
@@ -386,4 +383,14 @@ const updateQuestionTexts = (question_selector, new_text, budget_page) => {
   view_option_selected.innerHTML = selected_options.map(option => option.nextElementSibling.innerHTML).join(' ');
 }
 
+let budget_page = 0;
+let budget_page_dom = document.querySelector('.budget_page');
+let budget_progress = budget_page_dom.nextElementSibling;
+
+budget_progress.addEventListener('transitionend', () => budget_page_dom.innerHTML = (budget_page + 1) + ' / 2');
+
+const updateBudgetPage = (n) => {
+  budget_page += n;
+  budget_progress.style.setProperty('--budget_progress_translateX', `translateX(${budget_page}00%)`);
+}
 
