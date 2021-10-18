@@ -4,7 +4,7 @@
 	<div class="budget_header">
 		<div class="budget_pagination">
 			<p class="budget_page budget_text budget_text_sm">1 / 2</p>
-			<div class="budget_progress">Barrita</div>
+			<div class="budget_progress"></div>
 		</div>
 		<h5 class="budget_title">Presupuesta tu proyecto</h5>
 		<p class="budget_description budget_text budget_text_sm">¿Prefieres enviarnos un email a través de la sección <a href="">contacto</a>?</p>
@@ -121,13 +121,13 @@
         <label class="budget_option">
           <input
             name="budget"
-            type="radio"
+            type="checkbox"
             value="<2000"
-            class="budget_radio"
+            class="budget_radio budget_radio_checkbox"
             autocomplete="off"
             onclick="
-              altClassFromSelector('budget_answer_display', '#budget_1_0', ['budget_group']);
-              updateQuestionText(event, '#budget_1_0 .budget_question', 'Presupuesto:');
+              // altClassFromSelector('budget_answer_display', '#budget_1_0', ['budget_group']);
+              updateQuestionTexts('#budget_1_0 .budget_question', 'Otros:', '.budget_1');
             "
           >
           <p>Menos de 2000€, prefiero usar una plantilla prediseñada.</p>
@@ -136,12 +136,13 @@
         <label class="budget_option">
           <input
             name="budget"
-            type="radio"
+            type="checkbox"
             value="2000-5000"
-            class="budget_radio" autocomplete="off"
+            class="budget_radio budget_radio_checkbox"
+            autocomplete="off"
             onclick="
-              altClassFromSelector('budget_answer_display', '#budget_1_0', ['budget_group']);
-              updateQuestionText(event, '#budget_1_0 .budget_question', 'Presupuesto:');
+              // altClassFromSelector('budget_answer_display', '#budget_1_0', ['budget_group']);
+              updateQuestionTexts('#budget_1_0 .budget_question', 'Otros:', '.budget_1');
             "
           >
           <p>De 2000€ a 5000€, quiero una web diseñada y desarrollada a medida.</p>
@@ -150,13 +151,13 @@
         <label class="budget_option">
           <input
             name="budget"
-            type="radio"
+            type="checkbox"
             value=">5000"
-            class="budget_radio"
+            class="budget_radio budget_radio_checkbox"
             autocomplete="off"
             onclick="
-              altClassFromSelector('budget_answer_display', '#budget_1_0', ['budget_group']);
-              updateQuestionText(event, '#budget_1_0 .budget_question', 'Presupuesto:');
+              // altClassFromSelector('budget_answer_display', '#budget_1_0', ['budget_group']);
+              updateQuestionTexts('#budget_1_0 .budget_question', 'Otros:', '.budget_1');
             "
           >
           <p>Más de 5000€, busco una web con diseño y desarrollo a medida con funcionalidades complejas.</p>

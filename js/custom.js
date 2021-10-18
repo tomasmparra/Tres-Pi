@@ -377,6 +377,13 @@ const updateQuestionText = (event, question_selector, new_text) => {
 
 
 
+const updateQuestionTexts = (question_selector, new_text, budget_page) => {
+  let selected_options = [...document.querySelectorAll(budget_page + ' ' + '.budget_radio:checked')];
+  let question_to_update = document.querySelector(question_selector + ' .budget_text');
+  let view_option_selected = document.querySelector(question_selector + ' .budget_option_selected');
 
+  question_to_update.innerHTML = new_text;
+  view_option_selected.innerHTML = selected_options.map(option => option.nextElementSibling.innerHTML).join(' ');
+}
 
 
