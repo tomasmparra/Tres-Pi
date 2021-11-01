@@ -2,14 +2,6 @@ d=document;w=window;c=console;
 
 
 w.onload=()=>{
-  // LAZY LOAD FUNCTIONS MODULE
-  var lBs=[].slice.call(d.querySelectorAll(".lazy-background")),lIs=[].slice.call(d.querySelectorAll(".lazy")),opt={threshold:.01};
-  if("IntersectionObserver" in window){
-    let lBO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){let l=e.target;l.classList.add("visible");lBO.unobserve(l)}})},opt),
-        lIO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){let l=e.target;l.classList.remove("lazy");lIO.unobserve(l);l.srcset=l.dataset.url}})},opt);
-    lIs.forEach(lI=>{lIO.observe(lI)});lBs.forEach(lB=>{lBO.observe(lB)});
-  }
-
   // Modules setup
 	growUpController.setup()
 	obseController.setup()
