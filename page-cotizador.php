@@ -209,8 +209,8 @@
       class="budget_btn budget_btn_prev"
       onclick="
         document.querySelectorAll('.budget_answer_display').forEach(element => element.firstElementChild.click());
-        altClassFromSelector('budget_0', '.budget.budget_1', ['budget']);
         updateBudgetPage(-1);
+        altClassFromSelector(`budget_${budget_page}`, `.budget.budget_${budget_page+1}`, ['budget']);
         return false;
       "
     >Regresar</button>
@@ -223,10 +223,11 @@
         
         if(!invalid) {
           updateBudgetPage(+1);
-          altClassFromSelector('budget_1', '.budget.budget_0', ['budget']);
+          altClassFromSelector(`budget_${budget_page}`, `.budget.budget_${budget_page-1}`, ['budget']);
         } else {
           invalid.focus();
           invalid.parentElement.parentElement.previousElementSibling.click();
+          altClassFromSelector('budget_invalid', '.budget', ['budget', `budget_${budget_page}`, 'budget_invalid']);
         }
 
         return false;
@@ -244,11 +245,13 @@
         let invalid = [...document.querySelectorAll(`.budget_body_${budget_page} input`)].find(input => !input.checkValidity());
         
         if(!invalid) {
-          return true
+          return true;
         }
 
         invalid.focus();
         invalid.parentElement.parentElement.previousElementSibling.click();
+        altClassFromSelector('budget_invalid', '.budget', ['budget', `budget_${budget_page}`, 'budget_invalid']);
+
         return false;
       "
     >

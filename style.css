@@ -2655,7 +2655,7 @@ body.home{
   cursor: pointer;
   border-color: #0bbba9;
 }
-.budget_radio:invalid, .budget_radio_checkbox:invalid {
+.budget_invalid .budget_radio:invalid, .budget_invalid .budget_radio_checkbox:invalid {
   border-color: #ffb307;
 }
 .budget_radio_checkbox:optional {
