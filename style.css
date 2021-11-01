@@ -2579,6 +2579,9 @@ body.home{
   background-color: #0bbba9;
   grid-column: 1 / -1;
 }
+.budget_invalid .budget_deco {
+  background-color: #ffb307;
+}
 .budget_footer {
   display: grid;
   grid-auto-columns: min-content;

@@ -225,9 +225,9 @@
           updateBudgetPage(+1);
           altClassFromSelector(`budget_${budget_page}`, `.budget.budget_${budget_page-1}`, ['budget']);
         } else {
-          invalid.focus();
           invalid.parentElement.parentElement.previousElementSibling.click();
-          altClassFromSelector('budget_invalid', '.budget', ['budget', `budget_${budget_page}`, 'budget_invalid']);
+          invalid.parentElement.parentElement.parentElement.classList.add('budget_invalid');
+          // altClassFromSelector('budget_invalid', '.budget', ['budget', `budget_${budget_page}`, 'budget_invalid']);
         }
 
         return false;
@@ -248,9 +248,9 @@
           return true;
         }
 
-        invalid.focus();
         invalid.parentElement.parentElement.previousElementSibling.click();
-        altClassFromSelector('budget_invalid', '.budget', ['budget', `budget_${budget_page}`, 'budget_invalid']);
+        invalid.parentElement.parentElement.parentElement.classList.add('budget_invalid');
+        // altClassFromSelector('budget_invalid', '.budget', ['budget', `budget_${budget_page}`, 'budget_invalid']);
 
         return false;
       "
