@@ -45,19 +45,19 @@ alternates a class from a selector of choice, for example:
 <div class="someButton" onclick="altClassFromSelector('activ', '#navBar')"></div>
 */
 const altClassFromSelector = ( clase, selector, dont_remove = false )=>{
-  const elementos = [...d.querySelectorAll(selector)];
-  elementos.forEach(elemento => {
+  const selected = [...document.querySelectorAll(selector)];
+  selected.forEach(elemento => {
+    let has_class = (elemento.classList.contains(clase)) ? 1 : 0;
     // const x = d.querySelector(selector);
-    // if there is a main class removes all other classes
+    // dont_remove should be an array of classes to mantain, then remove all other classes
     if(dont_remove){
-      elemento.classList.forEach( item =>{
-        if( dont_remove.findIndex( element => element == item) == -1 && item!=clase ){
-          elemento.classList.remove(item);
-        }
-      });
+      let intersection = [...elemento.classList].filter(value => dont_remove.includes(value));
+      // console.log(intersection);
+      elemento.classList = []
+      intersection.forEach( item => { elemento.classList.add(item) });
     }
 
-    if(elemento.classList.contains(clase)){
+    if(has_class){
       if(dont_remove){
         if( dont_remove.findIndex( element => element == clase) == -1 ){
           elemento.classList.remove(clase)
@@ -374,8 +374,8 @@ const updateQuestionText = (event, question_selector, new_text) => {
   view_option_selected.innerHTML = selected_option.innerHTML;
 }
 
-const updateQuestionTexts = (question_selector, new_text, budget_page) => {
-  let selected_options = [...document.querySelectorAll(budget_page + ' ' + '.budget_radio:checked')];
+const updateQuestionTexts = (question_selector, budget_radio_list, new_text) => {
+  let selected_options = [...document.querySelectorAll(budget_radio_list + ' ' + '.budget_radio:checked')];
   let question_to_update = document.querySelector(question_selector + ' .budget_text');
   let view_option_selected = document.querySelector(question_selector + ' .budget_option_selected');
 
