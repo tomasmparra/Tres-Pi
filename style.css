@@ -1666,7 +1666,8 @@ body.home{
   order:var(--blah_right_img_order);
 }
 .blah_caption{
-  margin-top:auto;
+  margin-top: auto;
+  margin-bottom: calc(var(--zero_to_1) * 45px);
   display:grid;
   grid-gap: .7rem;
   position: relative;
