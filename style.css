@@ -105,6 +105,7 @@ FIN DE MAPA DE CONTENIDOS */
   --raichu_gold: #ffb307;
   --deco_grey: #252222;
   --deco_grey2: #C1C1C1;
+  --green_to_white: #0bbba9;
 
 
   /* FONTS */
@@ -137,7 +138,6 @@ FIN DE MAPA DE CONTENIDOS */
   --full_to_80_percent: 100%;
   --absolute_to_static: static;
   --center_to_left: center;
-  --green_to_white: #0bbba9;
   --grey_to_transparent: var(--bg_grey);
   --row_to_column: row;
   --full_to_max_content: 100%;
@@ -280,6 +280,7 @@ FIN DE MAPA DE CONTENIDOS */
   --duo_img_width:75%;
   --duo_circle_arrow_left:calc(var(--lateral) + 25% - 37.5px);
   --duo_circle_arrow_top:80%;
+  --duo_margin: 8.5rem var(--lateral) calc(88px + 2.5rem) var(--lateral);
 
   /* ?method */
   --method_GTC:1fr;
@@ -595,6 +596,7 @@ FIN DE MAPA DE CONTENIDOS */
     --duo_img_width:100%;
     --duo_circle_arrow_left: calc(500px + 6rem);
     --duo_circle_arrow_top:55%;
+    --duo_margin: 8.5rem 0 calc(88px + 2.5rem) var(--lateral);
 
     /* ?method */
     --method_GTC:1fr 1fr 1fr;
@@ -1055,7 +1057,7 @@ body.home{
 --------------------------------------------------------------------------- */
 
 .duo{
-  margin: 8.5rem 0 calc(88px + 2.5rem) var(--lateral);
+  margin: var(--duo_margin);
   display: grid;
   position: relative;
   /* grid-template-columns: 500px 1fr; */
@@ -1082,9 +1084,11 @@ body.home{
   /* width: 100%; */
   /* width: 75%; */
   width: var(--duo_img_width);
+  max-height: 300px;
   margin-left: auto;
   z-index: 3;
   height: auto;
+  transform: translateX(calc(var(--lateral) * (1 - var(--zero_to_1))));
 }
 .duo_title{
   /* font-size: 44px; */
@@ -1106,6 +1110,7 @@ body.home{
   left: var(--duo_circle_arrow_left);
   transform: translateX(-50%);
   z-index: 4;
+  transform: translateX(calc(-50% * var(--zero_to_1)));
 }
 
 /* ---------------------------------------------------------------------------
@@ -1776,7 +1781,8 @@ body.home{
   letter-spacing: 0.63px;
   margin:auto;
   position:relative;
-  width:max-content;
+  /* width:max-content; */
+  text-align: center;
 }
 .shog_title::after{
   content:'';
