@@ -2690,7 +2690,7 @@ body.home{
   position:sticky;
   top:0;
   height:0;
-  transform: translateY(5rem);
+  transform: translateY(7rem);
 }
 #redDotExample{bottom:0}
 #title_activator{top:5rem}
