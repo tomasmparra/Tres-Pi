@@ -151,5 +151,6 @@ function lt_add_meta_fields_to_taxonomy( $taxonomy_slug , $meta_fields = array()
 add_action( 'init', 'lt_custom_posts' );
 function lt_custom_posts() {
 	lt_new_custom_post( 'proyecto', 'dashicons-groups' );
+	lt_new_custom_post( 'miembro', 'dashicons-groups', array( 'cargo' ) );
 	// lt_new_custom_post( 'proyecto', 'dashicons-groups', array( 'area', 'departamento', 'cargo' ) );
 }

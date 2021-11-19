@@ -131,7 +131,7 @@ FIN DE MAPA DE CONTENIDOS */
   --onlyMobileF:flex;
   --onlyMobileG:grid;
   --onlyMobileB:block;
-  
+
   --auto_to_0: auto;
   --zero_to_auto: 0;
   --zero_to_1: 0;
@@ -457,10 +457,10 @@ html, body { scroll-behavior: smooth }
 
 
     --sizeR: calc(var(--sizeRd) * 1px);
-    
+
     /* ?HEADER */
     --top_padding: 2.7rem;
-    --header_z_index: auto;
+    --header_z_index: 3;
 
     /* ?nav_bar */
     --nav_bar_display:grid;
@@ -933,7 +933,9 @@ body.home{
   display: var(--logo_display);
   width:48px;
 }
+.main_color{transition: .5s}
 .page-proyectos .sticky_imago .main_color,
+.home .observed .sticky_imago .main_color,
 .single-proyecto .observed .sticky_imago .main_color{fill:var(--bg_grey)}
 
 .sticky_imago{
@@ -1127,6 +1129,11 @@ body.home{
   font-weight: 800;
   letter-spacing: 7px;
   color: var(--deco_grey);
+  user-select:         none;
+  -o-user-select:      none;
+  -ms-user-select:     none;
+  -moz-user-select:    none;
+  -webkit-user-select: none;
 }
 
 /* 6.04.2) =bold_italic: */
@@ -1183,10 +1190,12 @@ body.home{
   /* width: 243px; */
   width: var(--dropdowny_title_img_width);
   margin: auto 0 auto auto;
+  transition: 1s;
 }
-.dropdowny_title_img.solid{
-  margin-right: -10px;
-  margin-bottom: -10px;
+.dropdowny_title_img.observed.solid{
+  transform: translate(10px, 10px);
+  /* margin-right: -10px;
+  margin-bottom: -10px; */
 }
 .dropdowny{
   display: grid;
@@ -1304,11 +1313,25 @@ body.home{
   /* padding-bottom: 2.5rem; */
   padding-bottom: var(--slide_call_padding_B);
 }
+/* .slide_call svg, */
 .slide_call .circle_arrow{
   /* margin: 0 1rem 0 2rem; */
   margin: var(--slidey_circle_arrow_margin);
+  cursor: pointer;
   /* transform: rotate(-90deg) translateX(-50%); */
-  transform:var(--slidey_circle_arrow_transform);
+  /* transform:var(--slidey_circle_arrow_transform); */
+}
+.slide_call .circle_arrow circle{
+  transition:.4s;
+  fill: transparent;
+  stroke-width: 1;
+  r:80;
+}
+.slide_call .circle_arrow:hover circle{
+  stroke:2px red;
+  fill: rgba(0,0,0,.4);
+  stroke-width: 2;
+  r:88;
 }
 .slidey_bg_text {
   font-size: 40px;
@@ -1343,12 +1366,14 @@ body.home{
   content: ' ';
   position: absolute;
   height: 100%;
-  width: 33%;
+  transition:.5s;
+  /* width: 33%; */
   left:0;
   top: 0;
 }
 .slidey_progression{
   font-style: italic;
+
   font-size: 14px;
 }
 
@@ -1360,21 +1385,29 @@ body.home{
   display:grid;
   grid-auto-flow: column;
   grid-gap:2rem;
+  transition:.5s;
   padding-left: var(--slidey_card_box_padding_L);
 }
+
 .slidey_card{
+  grid-column: 1;
+  grid-row: 1;
+  transform:translateX(calc(100% + 2rem));
   display:grid;
   position:relative;
   width: 28vw;
+  transition:.5s .5s transform, 0s 0s z-index;
+  z-index: 0;
 }
-.slidey_card.first{
+/* .slidey_card.first{
   margin-left: 0;
 }
 .slidey_card.last{
   margin-right: 0;
-}
+} */
 .slidey_card_img{
   width:100%;
+  height:auto;
   height: 100%;
 }
 .slidey_card_caption{
@@ -1472,6 +1505,8 @@ body.home{
 .big_pics{
   background: white;
   display: grid;
+  z-index: 0;
+  position:relative;
   padding: var(--big_pics_padding);
   color: var(--bg_grey);
 }
@@ -2686,6 +2721,13 @@ body.home{
                           6.69) =redDot:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
+.home #header_activator{
+  position:sticky;
+  top:0;
+  transform: translateY(calc(100vh - 15rem));
+  grid-column: 1;
+  grid-row: 1;
+}
 .single-proyecto #header_activator{
   position:sticky;
   top:0;
@@ -2716,7 +2758,7 @@ body.home{
   grid-template-columns: var(--footer_columns);
   grid-template-rows: var(--footer_rows);
   grid-row-gap: 4.5rem;
-  z-index: 1;
+  z-index: 3;
 }
 
 .footer_bg{
@@ -2925,12 +2967,15 @@ body.home{
   letter-spacing: 2px;
 }
 .naver text{
-  fill            : none;
+  fill            : transparent;
   stroke          : white;
   stroke-width    : 2px;
   stroke-linejoin : round;
+  transition: .4s;
 }
-
+.naver text:hover{
+  fill: white;
+}
 .naver_mobile {
   grid-row: 3;
   grid-column: 1;
