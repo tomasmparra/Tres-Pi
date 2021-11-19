@@ -38,8 +38,9 @@ alternates a class from a selector of choice, for example:
 */
 const altClassFromSelector = ( clase, selector, dont_remove = false )=>{
   const selected = [...document.querySelectorAll(selector)];
-  selected.forEach(elemento => {
-    let has_class = (elemento.classList.contains(clase)) ? 1 : 0;
+  selected.forEach( elemento => {
+		// let has_class = (elemento.classList.contains(clase)) ? 1 : 0;
+		let has_class = !!elemento.classList.contains(clase);
     // const x = d.querySelector(selector);
     // dont_remove should be an array of classes to mantain, then remove all other classes
     if(dont_remove){
@@ -57,7 +58,7 @@ const altClassFromSelector = ( clase, selector, dont_remove = false )=>{
       } else {
         elemento.classList.remove(clase)
       }
-    }else{
+    } else {
       if(clase){
         elemento.classList.add(clase)
       }
@@ -81,7 +82,22 @@ function goBack(){w.history.back()}
 
 
 
+let slidey_controller = _ => {
+	let slidey = document.querySelector('.slidey');
+	// console.log('test');
 
+	let current = parseFloat(slidey.dataset.current);
+	let max     = parseFloat(slidey.dataset.max);
+
+	let new_value = current % max + 1;
+	// console.log(new_value);
+
+	slidey.querySelector('#current_slide').innerText = new_value
+	slidey.dataset.current = new_value;
+	altClassFromSelector('opt_'+new_value, '.slidey', ['slidey']);
+
+
+}
 
 
 
@@ -385,4 +401,3 @@ const updateBudgetPage = (n) => {
   budget_page += n;
   budget_progress.style.setProperty('--budget_progress_translateX', `translateX(${budget_page}00%)`);
 }
-

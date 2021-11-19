@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('', array( 'class' => 'Obse' )); ?>
 
 
 
@@ -30,7 +30,8 @@
     <p class="dropdowny_title">All u need…</p>
     <div class="dropdowny_img_box">
       <img class="dropdowny_title_img border rowcol1" src="<?php echo get_template_directory_uri() . '/assets/tres_pi_img_solid.png' ?>" alt="All you need is Tres Pi">
-      <img class="dropdowny_title_img solid rowcol1" src="<?php echo get_template_directory_uri() . '/assets/tres_pi_img_border.png' ?>" alt="All you need is Tres Pi">
+      <img class="dropdowny_title_img solid rowcol1 Obse" data-observe="#dropdowny_title_img_activator" src="<?php echo get_template_directory_uri() . '/assets/tres_pi_img_border.png' ?>" alt="All you need is Tres Pi">
+      <div class="redDot" id="dropdowny_title_img_activator"></div>
     </div>
   </div>
   <div class="dropdowny">
@@ -56,7 +57,16 @@
 
 
 
-<section class="slidey">
+<?php
+$i = 0;
+$args = array();
+$args = array(
+  'post_type' => 'miembro',
+  'order' => 'ASC',
+);
+$loop = new WP_Query( $args );
+?>
+<section class="slidey opt_1" data-current="1" data-max="<?=$loop->post_count?>">
   <p class="slidey_title">El equipo</p>
   <img class="slidey_bg" src="<?php echo get_template_directory_uri() . '/assets/slidey_bg.jpg' ?>" alt="Imagen de fondo" >
   <div class="slide_call">
@@ -64,37 +74,66 @@
       <br>
       <span>¿un café?</span>
     </p>
-    <img class="circle_arrow" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
+    <div class="circle_arrow" onclick="slidey_controller()">
+      <?php include get_template_directory() . '/assets/circle_arrow.svg'; ?>
+    </div>
   </div>
   <p class="html_deco onlyDesktopG">&lt;img&gt;</p>
 
   <div class="slidey_progress">
-    <p class="slidey_progression onlyDesktopG">1/3</p>
+    <p class="slidey_progression onlyDesktopF"><span id="current_slide">1</span>/3</p>
+    <?php for ($k=1; $k <= $loop->post_count; $k++) {
+      $awake_sizing = ".opt_$k .slidey_bar::after";
+      ?>
+      <style>
+      <?= $awake_sizing ?> {
+        width: <?= $k * 100/$loop->post_count ?>%;
+      }
+      </style>
+    <?php } ?>
     <div class="slidey_bar"></div>
   </div>
 
+
   <div class="slidey_card_box">
-    <figure class="slidey_card first">
-      <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
-      <figcaption class="slidey_card_caption rowcol1">
-        <p>Tomás Moral</p>
-        <p>CEO</p>
-      </figcaption>
-    </figure>
-    <figure class="slidey_card">
-      <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
-      <figcaption class="slidey_card_caption rowcol1">
-        <p>Sofia Molinero</p>
-        <p>CEO</p>
-      </figcaption>
-    </figure>
-    <figure class="slidey_card last">
-      <img class="slidey_card_img rowcol1" src="<?php echo get_template_directory_uri() . '/assets/profile_1.jpg' ?>" alt="Foto de perfil">
-      <figcaption class="slidey_card_caption rowcol1">
-        <p>Ramiro Gomez</p>
-        <p>CEO</p>
-      </figcaption>
-    </figure>
+    <?php
+    $i = 1;
+    while ( $loop->have_posts() ) { $loop->the_post();
+
+      $next_id = $i % $loop->post_count + 1;
+      // $next_id = $member['id'] % count($members) + 1;
+      $self_next = ".opt_$i .slidey_card.opt_$next_id";
+      $self_awake = ".opt_$i .slidey_card.opt_$i";
+      ?>
+
+      <style>
+      <?= $self_awake ?> {
+        transform:translateX(0);
+        transition:.5s 0s transform, 0s 0s z-index;
+        z-index: 2;
+      }
+      <?= $self_next ?> {
+        z-index: 1;
+        transition:.5s 1s transform, 0s 0s z-index;
+      }
+      </style>
+      <figure class="slidey_card opt_<?=$i?>">
+
+        <?php
+        $config = array(
+          'id' => get_post_thumbnail_id( get_the_ID() ),
+          'class' => 'slidey_card_img rowcol1',
+          'sizes' => [['576', '100']],
+          'default_size' => '100',
+        );
+        responsive_img($config);
+        ?>
+        <figcaption class="slidey_card_caption rowcol1">
+          <p><?=get_the_title()?></p>
+          <p><?='papapa'?></p>
+        </figcaption>
+      </figure>
+    <?php $i++;} ?>
   </div>
 </section>
 
@@ -127,6 +166,8 @@
 
 
 <section class="big_pics">
+  <div id="header_activator" class="redDot"></div>
+
   <h2 class="big_pics_title">Cada proyecto,<br><span><i>una web a medida</i></span></h2>
 
 
