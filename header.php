@@ -45,9 +45,9 @@ $scrt = '6LcRuNAUAAAAALBu7Ymh0yxmTXTJmP0rsnkjGyj0';
     wp_nav_menu($args);
     ?>
 
-    <div class="sticky_CTA_pos">  
+    <div class="sticky_CTA_pos">
       <p class="sticky_CTA" href="#">Comienza tu proyecto</p>
-      <button class="burger" onclick="altClassFromSelector('menu_open', '.header', ['header'])">
+      <button class="burger" onclick="altClassFromSelector('menu_open', '.header')">
         <div class="burger_bar"></div>
         <div class="burger_bar"></div>
         <div class="burger_bar"></div>

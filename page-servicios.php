@@ -1,19 +1,19 @@
-<?php get_header(); ?>
+<?php get_header('', array( 'class' => 'Obse' )); ?>
 
 
 
 
 <section class="duo">
   <div class="duo_caption">
-    <h1 class="duo_title">Lorem ipsum dolor<br>sir amet et sicue</h1>
+    <h1 class="duo_title">Que te ofrecemos?</h1>
     <p class="duo_text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat:
+      Nuestros conocimiento en IT no se limitan al desarrollo de webs. Sabemos de servidores, programacion, diseño, y más; por eso ofrecemos un amplio espectro de servicios en el ambito de software con foco en la web. Desde alojar tu web hasta diseñarla, damos forma a tu proyecto virtual y te ayudamos a llevarlo adelante en todas las etapas del mismo. Entre otras cosas ofrecemos:
       <br><br>
-      · Lorem ipsum dolor.<br>
-      · Lorem ipsum dolor sir amet et sicue.<br>
-      · Consectetur adipiscing elit.<br>
-      · Sed du mondo ut labore.<br>
-      · Ea commodo consequat ex ale.
+      · Diseño y desarrollo web<br>
+      · Alojamiento y seguridad virtual<br>
+      · Programacion a medida<br>
+      · Promociones especiales para ONGs<br>
+      · y más... anímate a preguntar
     </p>
     <div class="funky_stripe"></div>
   </div>
@@ -93,6 +93,7 @@
 
 
 <section class="faq">
+  <div class="redDot test" id="header_activator"></div>
   <h5 class="faq_title">¿Tienes alguna consulta?</h5>
   <p class="faq_subtitle">Quizá podemos resolverla fácilmente…</p>
   <div class="faq_deco"></div>
