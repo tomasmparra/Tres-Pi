@@ -146,9 +146,12 @@ FIN DE MAPA DE CONTENIDOS */
   --top_padding: 2.7rem;
   --header_z_index: 3;
 
+  --logo_color:white;
+
   /* ?nav_bar */
   --nav_bar_display:none;
   --nav_bar_position: fixed;
+  --nav_bar_height:0;
 
   /* ?sticky_stuff: */
   --logo_display:none;
@@ -462,9 +465,12 @@ html, body { scroll-behavior: smooth }
     --top_padding: 2.7rem;
     --header_z_index: 3;
 
+    --logo_color:var(--bg_grey);
+
     /* ?nav_bar */
     --nav_bar_display:grid;
     --nav_bar_position: relative;
+    --nav_bar_height:auto;
 
     /* ?sticky_stuff: */
     --sticky_CTA_font_family: var(--font_italic);
@@ -868,33 +874,30 @@ body.home{
 }
 
 .nav_bar {
-  /* padding: var(--top_padding) var(--lateral); */
-  padding: 0 var(--lateral);
-  position: var(--nav_bar_position);
-  top: calc(var(--top_padding) * var(--zero_to_1));
-  padding-top: calc(var(--top_padding) * 2 * (1 - var(--zero_to_1)));
-  left: 0;
-  right: var(--zero_to_auto);
-  height: var(--auto_to_0);
-  /* display: var(--nav_bar_display); */
+  background-color: var(--grey_to_transparent);
   display: grid;
   grid-auto-flow: var(--row_to_column);
   gap: 2rem 4rem;
-  background-color: var(--grey_to_transparent);
   grid-auto-columns: var(--full_to_max_content);
   grid-auto-rows: min-content;
+  height: var(--nav_bar_height);
+  left: 0;
+  padding: 0 var(--lateral);
+  padding-top: calc(var(--top_padding) * 2 * (1 - var(--zero_to_1)));
+  position: var(--nav_bar_position);
+  top: calc(var(--top_padding) * var(--zero_to_1));
+  transition: .6s;
+  right: var(--zero_to_auto);
+  overflow: hidden;
   z-index: calc((1 - var(--zero_to_1)) * -1);
 }
 .header.menu_open .nav_bar {
-  bottom: var(--zero_to_auto);
+  height:100vh;
 }
 .nav_bar .menu-item{
-  display: var(--onlyDesktopF);
+  display: flex;
   height: min-content;
   position: relative;
-}
-.header.menu_open .menu-item {
-  display: flex;
 }
 .nav_bar .menu-item::after{
   content: ' ';
@@ -934,9 +937,12 @@ body.home{
   width:48px;
 }
 .main_color{transition: .5s}
+
 .page-proyectos .sticky_imago .main_color,
-.home .observed .sticky_imago .main_color,
-.single-proyecto .observed .sticky_imago .main_color{fill:var(--bg_grey)}
+.observed .sticky_imago .main_color{
+  /* fill:var(--bg_grey); */
+  fill:var(--logo_color);
+}
 
 .sticky_imago{
   position: fixed;
@@ -1090,7 +1096,7 @@ body.home{
   width: var(--duo_img_width);
   max-height: 300px;
   margin-left: auto;
-  z-index: 3;
+  z-index: 2;
   height: auto;
   transform: translateX(calc(var(--lateral) * (1 - var(--zero_to_1))));
 }
@@ -1113,7 +1119,7 @@ body.home{
   /* left: calc(500px + 6rem); */
   left: var(--duo_circle_arrow_left);
   transform: translateX(-50%);
-  z-index: 4;
+  z-index: 2;
   transform: translateX(calc(-50% * var(--zero_to_1)));
 }
 
@@ -2721,13 +2727,20 @@ body.home{
                           6.69) =redDot:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.home #header_activator{
+#header_activator{
   position:sticky;
   top:0;
   transform: translateY(calc(100vh - 15rem));
   grid-column: 1;
   grid-row: 1;
 }
+/* .page-nos-define #header_activator{
+  position:sticky;
+  top:0;
+  transform: translateY(calc(100vh - 15rem));
+  grid-column: 1;
+  grid-row: 1;
+} */
 .single-proyecto #header_activator{
   position:sticky;
   top:0;
