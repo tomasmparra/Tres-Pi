@@ -1928,7 +1928,7 @@ body.home{
   height: 150px;
 }
 .faq_answer_display .faq_arrow { transform: rotate(180deg) }
-.faq_answer_display .faq_arrow svg g { fill: #0bbba9 }
+.faq_answer_display .faq_arrow svg g { fill: var(--funky_green) }
 
 
 
@@ -2162,7 +2162,7 @@ body.home{
   cursor: pointer;
 }
 .colab_ico:hover svg g {
-  fill: #0bbba9;
+  fill: var(--funky_green);
 }
 .colab_textic {
   display: grid;
@@ -2474,7 +2474,7 @@ body.home{
   border-bottom: solid #f9f9f9 0.1rem;
 }
 .thanks_close {
-  color: #0bbba9;
+  color: var(--funky_green);
   display: inline-block;
   padding: 1rem;
 }
@@ -2502,7 +2502,7 @@ body.home{
   text-align: right;
 }
 .prarrows_arrow_left { text-align: left; }
-.prarrows_text { color: #0bbba9; font-weight: 400; }
+.prarrows_text { color: var(--funky_green); font-weight: 400; }
 .prarrows_img { width: 1.3rem }
 .prarrows_arrow_left .prarrows_img { transform: rotate(180deg) }
 
@@ -2542,7 +2542,7 @@ body.home{
   position: absolute;
   width: 50%;
   height: 100%;
-  background-color: #0bbba9;
+  background-color: var(--funky_green);
   transition: 0.25s;
   transition-delay: 2.1s;
   transform: var(--budget_progress_translateX); /* JS */
@@ -2617,7 +2617,7 @@ body.home{
 }
 .budget_arrow svg g { fill: #f9f9f9; }
 .budget_group.budget_answer_display .budget_arrow { transform: rotate(180deg); }
-.budget_group.budget_answer_display .budget_arrow svg g { fill: #0bbba9; }
+.budget_group.budget_answer_display .budget_arrow svg g { fill: var(--funky_green); }
 .budget_answer {
   grid-column: 1 / -1;
   max-height: 0;
@@ -2629,7 +2629,7 @@ body.home{
 .budget_group.budget_answer_display .budget_answer { max-height: 300px; margin-bottom: 2rem; }
 .budget_deco {
   height: 2px;
-  background-color: #0bbba9;
+  background-color: var(--funky_green);
   grid-column: 1 / -1;
 }
 .budget_invalid .budget_deco {
@@ -2657,7 +2657,7 @@ body.home{
 }
 .budget_btn_img { width: 1rem; }
 .budget_btn_next, .budget_btn_send {
-  color: #0bbba9;
+  color: var(--funky_green);
   grid-row:1;
   grid-column: 2;
   transition-delay: 1.1s;
@@ -2709,17 +2709,17 @@ body.home{
   border: 2px solid;
   border-radius: 50%;
   cursor: pointer;
-  border-color: #0bbba9;
+  border-color: var(--funky_green);
 }
 .budget_invalid .budget_radio:invalid, .budget_invalid .budget_radio_checkbox:invalid {
-  border-color: #ffb307;
+  border-color: var(--raichu_gold);
 }
 .budget_radio_checkbox:optional {
   border-color: #d4d4d4;
 }
 .budget_radio:checked, .budget_radio_checkbox:checked {
-  background-color: #0bbba9;
-  border-color: #0bbba9;
+  background-color: var(--funky_green);
+  border-color: var(--funky_green);
 }
 
 /* ---------------------------------------------------------------------------
@@ -3000,7 +3000,7 @@ body.home{
   display: var(--onlyMobileG);
 }
 .naver_mobile_title {
-  color: #0bbba9;
+  color: var(--funky_green);
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
