@@ -132,9 +132,12 @@ FIN DE MAPA DE CONTENIDOS */
   --onlyMobileG:grid;
   --onlyMobileB:block;
 
+  --onlyMobileFequipo: flex;
+
   --auto_to_0: auto;
   --zero_to_auto: 0;
   --zero_to_1: 0;
+  --one_to_auto: 1;
   --full_to_80_percent: 100%;
   --absolute_to_static: static;
   --center_to_left: center;
@@ -362,6 +365,13 @@ FIN DE MAPA DE CONTENIDOS */
   --acceptance_arrow_margin_top: 2rem;
   --legal_row: 4;
 
+  /* ?member */
+  --anim_duration: 0.3s;
+  --anim_left_to_none: anim_to_left var(--anim_duration) forwards ease-in-out;
+  --anim_right_to_none: anim_to_right var(--anim_duration) forwards ease-in-out;
+  --anim_leftcenter_to_none: anim_left_to_center var(--anim_duration) forwards ease-in-out;
+  --anim_rightcenter_to_none: anim_right_to_center var(--anim_duration) forwards ease-in-out;
+
 }
 
 html, body { scroll-behavior: smooth }
@@ -415,10 +425,28 @@ html, body { scroll-behavior: smooth }
     --lateral:3rem;
     --lateral_alt: 3rem;
 
+    --onlyMobileFequipo: none;
+
+    --one_to_auto: auto;
+
     /* ?HEADER */
 
     /* ?big_pics */
     --big_pics_title_FS: 32px;
+
+    /* ?equipo */
+    --equipo_columns: 1fr 1fr 1fr;
+    --equipo_title_font_size: 1.7rem;
+    --member_img_padding: 1rem;
+    --member_img_width: 100;
+    --member_justify: start;
+    --member_text_margin: 0;
+
+    /* ?member */
+    --anim_left_to_none: none;
+    --anim_right_to_none: none;
+    --anim_leftcenter_to_none: none;
+    --anim_rightcenter_to_none: none;
 
     /* ?colabs */
     --colabs_columns: 1fr 1fr;
@@ -655,22 +683,14 @@ html, body { scroll-behavior: smooth }
     /* ?simplex */
     --simplex_padding: 1.9rem calc(var(--lateral) + 380px) .5rem calc(var(--lateral) + 2.8rem);
 
-    /* ?equipo */
-    --equipo_columns: 1fr 1fr 1fr;
-    --equipo_title_font_size: 1.7rem;
-    --member_img_padding: 1rem;
-    --member_img_width: 100;
-    --member_justify: start;
-    --member_text_margin: 0;
-
     /* ?contact */
     --contact_margin_left: calc(var(--lateral) + 2rem);
     --contact_magin_right: 0;
     --contact_padding: 0;
     --contact_max_width: 400px;
 
-  /* ?budget */
-  --budget_description: 1;
+    /* ?budget */
+    --budget_description: 1;
 
     /* ?FOOTER */
     --footer_title_size: 1.7rem;
@@ -2046,8 +2066,9 @@ body.home{
 .equipo_slider {
   display:grid;
   grid-template-columns: var(--equipo_columns);
-  column-gap: 4rem;
+  column-gap: 3rem;
   row-gap: 1rem;
+  overflow: hidden;
 }
 .equipo_slider * {
   user-drag: none;
@@ -2079,7 +2100,7 @@ body.home{
   grid-column:1/-1;
 }
 .equipo_arrows {
-  display: var(--onlyMobileF);
+  display: var(--onlyMobileFequipo);
   justify-content: space-between;
   align-items: center;
 }
@@ -2094,8 +2115,41 @@ body.home{
   display: grid;
   justify-items: var(--member_justify);
   grid-auto-rows: min-content;
+  position: relative;
+  width: 100%;
+  grid-column: var(--one_to_auto);
+  grid-row: var(--one_to_auto);
 }
-.member.inactive { display: var(--onlyDesktopG); }
+.member.to_left {
+  animation: var(--anim_left_to_none);
+}
+.member.to_right {
+  animation: var(--anim_right_to_none);
+}
+.member.left_to_center {
+  animation: var(--anim_leftcenter_to_none);
+}
+.member.right_to_center {
+  animation: var(--anim_rightcenter_to_none);
+}
+@keyframes anim_to_left {
+  from { left: 0 }
+  to { left: calc(-100% - var(--lateral) * 2) }
+}
+@keyframes anim_to_right {
+  from { left: 0 }
+  to { left: calc(100% + var(--lateral) * 2) }
+}
+@keyframes anim_left_to_center {
+  0% { left: calc(-100% - var(--lateral) * 2) }
+  75% { left: +10% }
+  100% { left: 0 }
+}
+@keyframes anim_right_to_center {
+  0% { left: calc(100% + var(--lateral) * 2) }
+  75% { left: -10% }
+  100% { left: 0 }
+}
 
 .member_img {
   width: calc(var(--member_img_width) * 1%);
@@ -2157,9 +2211,11 @@ body.home{
   column-gap: 0.5rem;
 }
 .colab_ico {
-  height: 1.13rem;
-  width: auto;
+  --ico_size: 1.25rem;
+
   cursor: pointer;
+  width: var(--ico_size);
+  height: var(--ico_size);
 }
 .colab_ico:hover svg g {
   fill: var(--funky_green);
@@ -2168,6 +2224,9 @@ body.home{
   display: grid;
   grid-auto-flow: column;
   align-items: center;
+  column-gap: 1rem;
+  grid-auto-columns: max-content;
+  justify-content: space-between;
 }
 
 
