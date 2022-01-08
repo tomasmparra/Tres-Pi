@@ -19,13 +19,13 @@
     );
     responsive_img($config);
   ?>
-  <img class="circle_arrow" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
+  <a href="#descubre" class="circle_arrow"><img src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button"></a>
 </section>
 
 
 
 
-<section class="dropdowny_box">
+<section class="dropdowny_box" id="descubre">
   <div class="dropdowny_title_text">
     <p class="dropdowny_title">All u need…</p>
     <div class="dropdowny_img_box">
