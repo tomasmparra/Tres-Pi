@@ -260,8 +260,10 @@ class Carousel {
 		this.title = gallery.id;
 		this.isDown = false;
 		this.mouseX = 0;
-		this.mouseDeltaChange = 100;
-
+		this.mouseDeltaChange = 10;
+		
+		for(let i = 0; i < this.elements.length; i++) { this.elements[i].classList.add("to_right") }
+		
 		if(this.elements.length>1){
             gallery.querySelector('.nextButton').onclick = () =>{this.plusDivs(+1)}
             gallery.querySelector('.prevButton').onclick = () =>{this.plusDivs(-1)}
@@ -272,14 +274,39 @@ class Carousel {
 		this.slideEvents(gallery);
 	}
 
-    showDivs(n){
+    showDivs(n, dir=0){
+		let prev = this.j;
 
-        if(n>this.elements.length){this.j=1}
-        if(n<1){this.j=this.elements.length}
-        for(let i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
-        this.elements[this.j-1].classList.remove("inactive");
+		if(dir < 0) prev = this.j + 1;
+		else if(dir > 0) prev = this.j - 1;
 
+		if(n>this.elements.length){this.j=1; prev=this.elements.length}
+        if(n<1){this.j=this.elements.length; prev=1}
+		
+        // for(let i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
+
+		if(this.j === prev) {
+			this.elements[this.j-1].className = 'member Element';
+			this.elements[this.j-1].classList.add('right_to_center');
+		}
+		
+		else if(dir < 0 ) {
+			this.elements[prev-1].className = 'member Element';
+			this.elements[prev-1].classList.add('to_right');
+
+			this.elements[this.j-1].className = 'member Element';
+			this.elements[this.j-1].classList.add('left_to_center');
+		}
+		
+		else {
+			this.elements[prev-1].className = 'member Element';
+			this.elements[prev-1].classList.add('to_left');
+
+			this.elements[this.j-1].className = 'member Element';
+			this.elements[this.j-1].classList.add('right_to_center');
+		}
     }
+
     carousel(){this.j++;
         if (this.elements) {
             for(let i=0;i<this.elements.length;i++){this.elements[i].classList.add("inactive")}
@@ -290,7 +317,7 @@ class Carousel {
 
     }
 
-    plusDivs(n){this.showDivs(this.j+=n)}
+    plusDivs(n){this.showDivs(this.j+=n, n)}
 
 	slideEvents(gallery) {
 		['mousedown', 'touchstart'].forEach((e) => {

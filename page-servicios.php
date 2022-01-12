@@ -93,7 +93,7 @@
 
 
 <section class="faq">
-  <div class="redDot test" id="header_activator"></div>
+  <div class="redDot" id="header_activator"></div>
   <h5 class="faq_title">¿Tienes alguna consulta?</h5>
   <p class="faq_subtitle">Quizá podemos resolverla fácilmente…</p>
   <div class="faq_deco"></div>
