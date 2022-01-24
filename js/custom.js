@@ -391,13 +391,22 @@ const updateQuestionTexts = (question_selector, budget_radio_list, new_text) => 
   view_option_selected.innerHTML = selected_options.map(option => option.nextElementSibling.innerHTML).join(' ');
 }
 
-let budget_page = 0;
 let budget_page_dom = document.querySelector('.budget_page');
-let budget_progress = budget_page_dom.nextElementSibling;
+if(budget_page_dom) {
+  let budget_page = 0;
+  let budget_progress = budget_page_dom.nextElementSibling;
 
-budget_progress.addEventListener('transitionend', () => budget_page_dom.innerHTML = (budget_page + 1) + ' / 2');
+  budget_progress.addEventListener('transitionend', () => budget_page_dom.innerHTML = (budget_page + 1) + ' / 2');
 
-const updateBudgetPage = (n) => {
-  budget_page += n;
-  budget_progress.style.setProperty('--budget_progress_translateX', `translateX(${budget_page}00%)`);
+  const updateBudgetPage = (n) => {
+    budget_page += n;
+    budget_progress.style.setProperty('--budget_progress_translateX', `translateX(${budget_page}00%)`);
+  }
+}
+
+window.onscroll = () => {
+  window.requestAnimationFrame(() => {
+    window.onscroll = null;
+    altClassFromSelector('sticky_CTA_pos_anim', '.sticky_CTA_pos', ['sticky_CTA_pos']);
+  });
 }

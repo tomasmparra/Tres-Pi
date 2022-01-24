@@ -55,7 +55,7 @@
     </nav>
 
     <ul class="legal">
-      <li class="legal_li legal_li_full"><a class="legal_link" href="#">© Trespi 2021</a></li>
+      <li class="legal_li legal_li_full"><a class="legal_link" href="#">© Trespi 2022</a></li>
       <!-- <div class="legal_deco"></div> -->
       <li class="legal_li"><a class="legal_link" href="#">Política de privacidad</a></li>
       <div class="legal_deco"></div>

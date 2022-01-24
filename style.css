@@ -164,6 +164,7 @@ FIN DE MAPA DE CONTENIDOS */
   --sticky_CTA_underline_display:none;
   --sticky_imago_transform: translateY(-50%);
   --sticky_imago_left:var(--lateral);
+  --CTA_btn_right: calc((var(--lateral) + 1.25rem + 1.5rem));
 
   /* ?hero */
   --hero_GTC: 1fr;
@@ -509,6 +510,7 @@ html, body { scroll-behavior: smooth }
     --sticky_imago_transform:translate(-50%, calc(-0.8rem / 2));
     --sticky_imago_left:calc(var(--lateral) / 2);
     --sticly_imago_left: calc(var(--lateral) / 5);
+    --CTA_btn_right: calc(var(--lateral) - 1.25rem);
 
 
     /* ?hero */
@@ -986,6 +988,9 @@ body.home{
   align-items: center;
   transform: translateY(-50%);
 }
+.sticky_CTA_over {
+  overflow: hidden;
+}
 .sticky_CTA{
   font-size:var(--sticky_CTA_font_size);
   /* font-size: 18px; */
@@ -996,13 +1001,18 @@ body.home{
   letter-spacing: 0.82px;
   color: var(--raichu_gold);
   cursor: pointer;
+  padding-bottom: calc((12px + 2px) * var(--zero_to_1)); /* after + line height */
+}
+.sticky_CTA_pos_anim .sticky_CTA {
+  transition: 0.5s 0.5s ease-in-out;
+  transform: translateX(100%);
 }
 .sticky_CTA::after{
   content: ' ';
   position: absolute;
   /* display:none; */
   display:var(--sticky_CTA_underline_display);
-  bottom: -12px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
@@ -1010,8 +1020,29 @@ body.home{
   transition: .25s;
   transform-origin: right;
 }
+.sticky_CTA_pos_anim .sticky_CTA::after {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
 .sticky_CTA:hover::after{
   transform: scaleX(0);
+}
+.sticky_CTA_btn {
+  position: fixed;
+  top: var(--top_padding);
+  right: var(--CTA_btn_right);
+  background: none;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--raichu_gold);
+  border-radius: 50%;
+  transform-origin: center right;
+  transform: translateY(calc(-50% - (var(--sticky_CTA_font_size) / 2) * var(--zero_to_1))) scale(0);
+}
+.sticky_CTA_pos_anim + .sticky_CTA_btn {
+  transition: transform 0.5s 0.5s cubic-bezier(.56,1.45,.71,1.53);
+  transform: translateY(calc(-50% - (var(--sticky_CTA_font_size) / 2) * var(--zero_to_1))) scale(1);
 }
 
 /* ---------------------------------------------------------------------------
@@ -1296,6 +1327,7 @@ body.home{
 .dropdowny_CTA_icon{
   /* width: 31px; */
   width: var(--dropdowny_CTA_icon_width);
+  height: var(--dropdowny_CTA_icon_width);
 }
 
 /* ---------------------------------------------------------------------------
