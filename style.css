@@ -1039,6 +1039,18 @@ body.home{
   border-radius: 50%;
   transform-origin: center right;
   transform: translateY(calc(-50% - (var(--sticky_CTA_font_size) / 2) * var(--zero_to_1))) scale(0);
+  cursor: pointer;
+}
+.sticky_CTA_btn svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: auto;
+}
+.sticky_CTA_btn path {
+  fill: #fff;
 }
 .sticky_CTA_btn::after {
   content: '';
