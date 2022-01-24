@@ -848,7 +848,8 @@ ul,ol{list-style:none}
 --------------------------------------------------------------------------- */
 
 body.page:not(.page-proyectos),
-body.home{
+body.home,
+body.error404{
   background: var(--bg_grey);
 }
 
@@ -2607,6 +2608,9 @@ body.home{
   padding: 1rem;
 }
 .thanks ~ .footer { /* ---------------------------------------------------- */
+  display: none;
+}
+.error404 .header { /* ---------------------------------------------------- */ 
   display: none;
 }
 
