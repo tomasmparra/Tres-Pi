@@ -38,7 +38,9 @@
 <section class="shog">
   <div class="shog_slid">
     <img class="" src="<?= get_template_directory_uri() . '/assets/slidey_bg.jpg' ?>" alt="">
-    <a href="<?= site_url() ?>/servicios"><img class="circle_arrow" src="<?= get_template_directory_uri() . '/assets/circle_arrow.svg' ?>" alt="Scroll down button"></a>
+    <a href="<?= site_url() ?>/servicios" class="circle_arrow">
+      <?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow.svg') ?>
+    </a>
   </div>
 
   <a class="shog_title" href="<?= site_url() ?>/servicios">Descubre nuestros servicios</a>

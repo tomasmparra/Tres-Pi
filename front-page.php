@@ -19,7 +19,9 @@
     );
     responsive_img($config);
   ?>
-  <a href="#descubre" class="circle_arrow"><img src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button"></a>
+  <a href="#descubre" class="circle_arrow">
+    <?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow.svg') ?>
+  </a>
 </section>
 
 

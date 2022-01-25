@@ -26,8 +26,8 @@
     );
     responsive_img($config);
   ?>
-  <a href="#metodología">
-    <img class="circle_arrow" src="<?php echo get_template_directory_uri() . '/assets/hero_arrow_down.png' ?>" alt="Scroll down button">
+  <a href="#metodología" class="circle_arrow">
+    <?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow.svg') ?>
   </a>
 </section>
 
@@ -84,8 +84,8 @@
   <div class="shog_slid">
     <img class="" src="<?= get_template_directory_uri() . '/assets/typing.jpg' ?>" alt="">
 
-    <a href="<?= site_url('proyectos') ?>">
-      <img class="circle_arrow" src="<?= get_template_directory_uri() . '/assets/circle_arrow.svg' ?>" alt="Scroll down button">
+    <a href="<?= site_url('proyectos') ?>" class="circle_arrow">
+      <?= file_get_contents(get_template_directory_uri() . '/assets/circle_arrow.svg') ?>
     </a>
   </div>
   <a href="<?= site_url('proyectos') ?>" class="shog_title">Descubre nuestros proyectos</a>
