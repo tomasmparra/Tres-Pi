@@ -1871,6 +1871,9 @@ body.error404{
   transform: var(--blah_icon_deco_transform);
   width: calc(25 / var(--sizeRa) * 1rem);
 }
+.blah_icon_deco path {
+  fill: var(--funky_green);
+}
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -2674,8 +2677,9 @@ body.error404{
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 .prarrows {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.5rem;
   padding: 0 var(--lateral) 2.5rem var(--lateral);
 }
 .prarrows_arrow {
@@ -2686,8 +2690,14 @@ body.error404{
   background: none;
   border: none;
   text-align: right;
+  margin-left: auto;
+  margin-right: 0;
 }
-.prarrows_arrow_left { text-align: left; }
+.prarrows_arrow_left {
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
 .prarrows_text { color: var(--funky_green); font-weight: 400; }
 .prarrows_img { width: 1.3rem }
 .prarrows_arrow_left .prarrows_img { transform: rotate(180deg) }
