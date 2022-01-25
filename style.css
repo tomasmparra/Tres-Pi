@@ -266,8 +266,9 @@ FIN DE MAPA DE CONTENIDOS */
 
   --pro3_GTC: 1fr;
   --pro3_P: 1rem 3.5rem 0 0;
-  --pro3_altImg_margin: 3rem auto auto 4.5rem;
-  --pro3_caption_M: 0rem;
+  --pro3_altImg_size: 50vw;
+  --pro3_altImg_margin: auto -3.5rem calc(var(--pro3_altImg_size) / -2) auto;
+  --pro3_caption_M: calc(var(--pro3_altImg_size) / 2);
 
   --pro0_img_margin: 2.5rem 0 0 0;
   --pro0_img_transform: translateX(var(--lateral_alt));
@@ -611,6 +612,8 @@ html, body { scroll-behavior: smooth }
 
     --pro3_GTC: 1.4fr 1fr;
     --pro3_P: 2.2rem 0 12rem 3.7rem;
+    --pro3_altImg_size: 25vw;
+    --pro3_altImg_margin: auto calc(var(--pro3_altImg_size) / -2) calc(var(--pro3_altImg_size) / -2) auto;
     --pro3_caption_M: 3rem;
 
     --pro0_img_margin: unset;
@@ -728,7 +731,7 @@ html, body { scroll-behavior: smooth }
     /* ?pro */
     --pro0_padding: 160px;
 
-    --pro3_altImg_margin: auto;
+    /* --pro3_altImg_margin: auto; */
 
     /* ?colabs */
     --colabs_columns: 1fr 1fr 1fr;
@@ -749,7 +752,6 @@ html, body { scroll-behavior: smooth }
 
     /* ?pro */
     --pro0_padding: 270px;
-    --pro3_altImg_margin: auto 0 0 auto;
     --big_pics_title_FS: 60px;
 
 
@@ -1750,10 +1752,9 @@ body.error404{
   grid-column: 1;
   grid-row: 1;
   margin: var(--pro3_altImg_margin);
-  object-fit: contain;
-  width: 72%;
-  height: auto;
-  transform: translate(30%, 62%);
+  object-fit: cover;
+  width: var(--pro3_altImg_size);
+  height: var(--pro3_altImg_size);
 }
 
 
