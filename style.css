@@ -1141,23 +1141,27 @@ body.error404{
   margin-left: var(--hero_circle_arrow_margin_L);
   grid-row: var(--hero_circle_arrow_GR);
   /* grid-row:1; */
-  transform: translateY(50%) rotate(90deg);
+  transform: translateY(50%) rotate(90deg) scale(1);
   z-index: 2;
+  transition: transform 0.4s;
 
   /* width: 5rem;
   height: 5rem; */
+}
+.hero .circle_arrow:hover {
+  transform: translateY(50%) rotate(90deg) scale(1.1);
 }
 .hero .circle_arrow circle {
   transition:.4s;
   fill: transparent;
   stroke-width: 1;
-  r:80;
+  /* r:80; */
 }
 .hero .circle_arrow:hover circle {
   stroke: 2px;
   fill: rgba(0,0,0,.4);
   stroke-width: 2;
-  r: 88;
+  /* r: 88; */
 }
 
 
@@ -1221,19 +1225,23 @@ body.error404{
   left: var(--duo_circle_arrow_left);
   transform: translateX(-50%);
   z-index: 2;
-  transform: translateX(calc(-50% * var(--zero_to_1))) rotate(90deg);
+  transform: translateX(calc(-50% * var(--zero_to_1))) rotate(90deg) scale(1);
+  transition: transform 0.4s;
+}
+.duo .circle_arrow:hover {
+  transform: translateX(calc(-50% * var(--zero_to_1))) rotate(90deg) scale(1.1);
 }
 .duo .circle_arrow circle {
   transition:.4s;
   fill: transparent;
   stroke-width: 1;
-  r:80;
+  /* r:80; */
 }
 .duo .circle_arrow:hover circle {
   stroke: 2px;
   fill: rgba(0,0,0,.4);
   stroke-width: 2;
-  r: 88;
+  /* r: 88; */
 }
 
 
@@ -1442,18 +1450,23 @@ body.error404{
   cursor: pointer;
   /* transform: rotate(-90deg) translateX(-50%); */
   /* transform:var(--slidey_circle_arrow_transform); */
+  transform: scale(1);
+  transition: transform 0.4s;
+}
+.slide_call .circle_arrow:hover {
+  transform: scale(1.1);
 }
 .slide_call .circle_arrow circle{
   transition:.4s;
   fill: transparent;
   stroke-width: 1;
-  r:80;
+  /* r:80; */
 }
 .slide_call .circle_arrow:hover circle{
   stroke:2px red;
   fill: rgba(0,0,0,.4);
   stroke-width: 2;
-  r:88;
+  /* r:88; */
 }
 .slidey_bg_text {
   font-size: 40px;
@@ -1963,19 +1976,23 @@ body.error404{
   bottom:0;
   /* right:70px; */
   right:var(--shog_circle_arrow_right);
-  transform:translateY(50%);
+  transform:translateY(50%) scale(1);
+  transition: transform 0.4s;
+}
+.shog .circle_arrow:hover {
+  transform:translateY(50%) scale(1.1);
 }
 .shog .circle_arrow circle {
   transition:.4s;
   fill: transparent;
   stroke-width: 1;
-  r: 80;
+  /* r: 80; */
 }
 .shog .circle_arrow:hover circle {
   stroke: 2px;
   fill: rgba(0,0,0,.4);
   stroke-width: 2;
-  r: 88;
+  /* r: 88; */
 }
 
 
